@@ -25,42 +25,20 @@
 <meta name="twitter:description" content="最近学了LCA的相关问题在此总结下 在有根树中，两个节点u和v的公共祖先中距离最近的那个成为其最近公共祖先，在树上两点因为存在唯一的最短路，故其LCA为最短路上深度最小的点。通过求解LCA我们可以处理如求解树或DAG上任意两点的最短距离，将RMQ转化为LCA，结合树链剖分操作等。求解$LCA$的各种方法全部以HDU 2586为例（自娱自乐）">
 
 
-<!-- mathjax config similar to math.stackexchange -->
+    <!-- Edit here -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$'],['\\(','\\)']] } });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"],['$$$','$$$'] ],
-        processEscapes: true
-      }
-    });
-  </script>
-  
-  <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-  </script>
-  
-  <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-          var all = MathJax.Hub.getAllJax(), i;
-          for(i=0; i < all.length; i += 1) {
-              all[i].SourceElement().parentNode.className += ' has-jax';
-          }
-      });
-  </script>
-  
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+
+
 <link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
 
 <link rel="stylesheet" href="/styles.5597c95e361b601d260c.css">
 
-<script src="/config.f62158dd223e198b3057.js"></script>
+<script src="/config.cef65905056108a8c61b.js"></script>
 </head>
 <body>
 <is-root></is-root>
