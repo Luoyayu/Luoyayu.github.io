@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="baidu-site-verification" content="O2Mr9seYex" />
+<title>LCA总结 - ACM</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#2a2b33">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+<meta name="description" content="最近学了LCA的相关问题在此总结下 在有根树中，两个节点u和v的公共祖先中距离最近的那个成为其最近公共祖先，在树上两点因为存在唯一的最短路，故其LCA为最短路上深度最小的点。通过求解LCA我们可以处理如求解树或DAG上任意两点的最短距离，将RMQ转化为LCA，结合树链剖分操作等。求解$LCA$的各种方法全部以HDU 2586为例（自娱自乐）">
+<meta name="keywords" content="ACM-LCA,ACM-树,ACM-图论,ACM-总结">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LCA总结">
+<meta property="og:url" content="https://blog.luoyayu.cn/post/2017-08-16-LCA/index.html">
+<meta property="og:site_name" content="ACM">
+<meta property="og:description" content="最近学了LCA的相关问题在此总结下 在有根树中，两个节点u和v的公共祖先中距离最近的那个成为其最近公共祖先，在树上两点因为存在唯一的最短路，故其LCA为最短路上深度最小的点。通过求解LCA我们可以处理如求解树或DAG上任意两点的最短距离，将RMQ转化为LCA，结合树链剖分操作等。求解$LCA$的各种方法全部以HDU 2586为例（自娱自乐）">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-09T11:44:21.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LCA总结">
+<meta name="twitter:description" content="最近学了LCA的相关问题在此总结下 在有根树中，两个节点u和v的公共祖先中距离最近的那个成为其最近公共祖先，在树上两点因为存在唯一的最短路，故其LCA为最短路上深度最小的点。通过求解LCA我们可以处理如求解树或DAG上任意两点的最短距离，将RMQ转化为LCA，结合树链剖分操作等。求解$LCA$的各种方法全部以HDU 2586为例（自娱自乐）">
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"],['$$$','$$$'] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+  </script>
+  
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+          var all = MathJax.Hub.getAllJax(), i;
+          for(i=0; i < all.length; i += 1) {
+              all[i].SourceElement().parentNode.className += ' has-jax';
+          }
+      });
+  </script>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+<link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
+
+<link rel="stylesheet" href="/styles.5597c95e361b601d260c.css">
+
+<script src="/config.e23fd3cf52a634162ec2.js"></script>
+</head>
+<body>
+<is-root></is-root>
+<script src="/runtime.a66f828dca56eeb90e02.js"></script>
+<script src="/polyfills.8f67e44aa389442fc98e.js"></script>
+<script src="/main.b51dbf855b48db0f2d0c.zh-Hans.js"></script>
+</body>
+</html>

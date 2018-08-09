@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="baidu-site-verification" content="O2Mr9seYex" />
+<title>IEE754 - ACM</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#2a2b33">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+<meta name="description" content="本文讨论三个问题 计算机如何表示浮点数，不同平台，处理器，是否一致 32位精度浮点数float与64位精度浮点数double能表示的范围 浮点数是如何存储的最后检验 printf(“%d”, 2.5)  IEEE754标准4种浮点数值的表示  单精度 双精度 延伸单精确度(43位元以上) 延伸双精确度(79位元以上)  浮点数表示$\displaystyle Value=sign\times ex">
+<meta name="keywords" content="IEE754,浮点数,汇编">
+<meta property="og:type" content="website">
+<meta property="og:title" content="IEE754">
+<meta property="og:url" content="https://blog.luoyayu.cn/post/2018-04-02-IEEE754/index.html">
+<meta property="og:site_name" content="ACM">
+<meta property="og:description" content="本文讨论三个问题 计算机如何表示浮点数，不同平台，处理器，是否一致 32位精度浮点数float与64位精度浮点数double能表示的范围 浮点数是如何存储的最后检验 printf(“%d”, 2.5)  IEEE754标准4种浮点数值的表示  单精度 双精度 延伸单精确度(43位元以上) 延伸双精确度(79位元以上)  浮点数表示$\displaystyle Value=sign\times ex">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/General_floating_point_frac.svg/640px-General_floating_point_frac.svg.png?1522586541085">
+<meta property="og:image" content="http://leanote.com/api/file/getImage?fileId=5ac0edeeab644147970012de">
+<meta property="og:updated_time" content="2018-08-09T10:28:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="IEE754">
+<meta name="twitter:description" content="本文讨论三个问题 计算机如何表示浮点数，不同平台，处理器，是否一致 32位精度浮点数float与64位精度浮点数double能表示的范围 浮点数是如何存储的最后检验 printf(“%d”, 2.5)  IEEE754标准4种浮点数值的表示  单精度 双精度 延伸单精确度(43位元以上) 延伸双精确度(79位元以上)  浮点数表示$\displaystyle Value=sign\times ex">
+<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/General_floating_point_frac.svg/640px-General_floating_point_frac.svg.png?1522586541085">
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"],['$$$','$$$'] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+  </script>
+  
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+          var all = MathJax.Hub.getAllJax(), i;
+          for(i=0; i < all.length; i += 1) {
+              all[i].SourceElement().parentNode.className += ' has-jax';
+          }
+      });
+  </script>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+<link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
+
+<link rel="stylesheet" href="/styles.5597c95e361b601d260c.css">
+
+<script src="/config.e23fd3cf52a634162ec2.js"></script>
+</head>
+<body>
+<is-root></is-root>
+<script src="/runtime.a66f828dca56eeb90e02.js"></script>
+<script src="/polyfills.8f67e44aa389442fc98e.js"></script>
+<script src="/main.b51dbf855b48db0f2d0c.zh-Hans.js"></script>
+</body>
+</html>

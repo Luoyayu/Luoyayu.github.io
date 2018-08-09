@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="baidu-site-verification" content="O2Mr9seYex" />
+<title>区间DP - ACM</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#2a2b33">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+<meta name="description" content="这段时间做了区间DP在此总结下POJ 1651 Multiplication Puzzle题意给出序列$a$,求出最小得分—— 取出的数左边的数右边的数 (不能取两边)，实质为矩阵链乘变形，设$dp[i][j]$为取光$(i,j)$之间的元素所得的最小值, $k$为区间$(i,j)$最后取出的元素，这样转移就可以维持状态方程的一致性$cmin(dp[i][j], DP(l,k)+DP(k,r)+a">
+<meta name="keywords" content="ACM-总结,ACM-区间DP,ACM-DP">
+<meta property="og:type" content="website">
+<meta property="og:title" content="区间DP">
+<meta property="og:url" content="https://blog.luoyayu.cn/post/2017-10-18-区间DP小结/index.html">
+<meta property="og:site_name" content="ACM">
+<meta property="og:description" content="这段时间做了区间DP在此总结下POJ 1651 Multiplication Puzzle题意给出序列$a$,求出最小得分—— 取出的数左边的数右边的数 (不能取两边)，实质为矩阵链乘变形，设$dp[i][j]$为取光$(i,j)$之间的元素所得的最小值, $k$为区间$(i,j)$最后取出的元素，这样转移就可以维持状态方程的一致性$cmin(dp[i][j], DP(l,k)+DP(k,r)+a">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-08-09T11:15:01.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="区间DP">
+<meta name="twitter:description" content="这段时间做了区间DP在此总结下POJ 1651 Multiplication Puzzle题意给出序列$a$,求出最小得分—— 取出的数左边的数右边的数 (不能取两边)，实质为矩阵链乘变形，设$dp[i][j]$为取光$(i,j)$之间的元素所得的最小值, $k$为区间$(i,j)$最后取出的元素，这样转移就可以维持状态方程的一致性$cmin(dp[i][j], DP(l,k)+DP(k,r)+a">
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"],['$$$','$$$'] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+  </script>
+  
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+          var all = MathJax.Hub.getAllJax(), i;
+          for(i=0; i < all.length; i += 1) {
+              all[i].SourceElement().parentNode.className += ' has-jax';
+          }
+      });
+  </script>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+<link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
+
+<link rel="stylesheet" href="/styles.5597c95e361b601d260c.css">
+
+<script src="/config.e23fd3cf52a634162ec2.js"></script>
+</head>
+<body>
+<is-root></is-root>
+<script src="/runtime.a66f828dca56eeb90e02.js"></script>
+<script src="/polyfills.8f67e44aa389442fc98e.js"></script>
+<script src="/main.b51dbf855b48db0f2d0c.zh-Hans.js"></script>
+</body>
+</html>
