@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://blog.luoyayu.cn/post/2018-08-09-Dilworth%E5%AE%9A%E7%90%86/index.html</loc>
+    <lastmod>2018-08-09T15:29:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>Dilworth定理与构造题</title>
+        <pubTime>2018-08-08T16:00:00.000Z</pubTime>
+        
+        <tag>ACM-codeforces</tag>
+         
+        <tag>ACM-数学</tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="https://blog.luoyayu.cn/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.luoyayu.cn/post/2018-05-07-HDU%205527%20Too%20Rich/index.html</loc>
     <lastmod>2018-08-09T15:21:28.000Z</lastmod>
     <data>
@@ -37,28 +59,6 @@
            
              
               <breadCrumb title="lang" url="https://blog.luoyayu.cn/categories/lang/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.luoyayu.cn/post/2018-08-09-Dilworth%E5%AE%9A%E7%90%86/index.html</loc>
-    <lastmod>2018-08-09T14:16:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>Dilworth定理与构造题</title>
-        <pubTime>2018-08-08T16:00:00.000Z</pubTime>
-        
-        <tag>ACM-codeforces</tag>
-         
-        <tag>ACM-数学</tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="https://blog.luoyayu.cn/categories/ACM/"/>
           
         </display>
     </data>
@@ -173,9 +173,9 @@
         <title>CF近期做题记录</title>
         <pubTime>2018-08-03T16:00:00.000Z</pubTime>
         
-        <tag>ACM-记录</tag>
-         
         <tag>ACM-codeforces</tag>
+         
+        <tag>ACM-记录</tag>
          
          
            
