@@ -1,0 +1,594 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Monaco;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:DengXian;}
+pre
+	{mso-style-link:"HTML 预设格式 字符";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:宋体;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:DengXian;}
+span.HTML
+	{mso-style-name:"HTML 预设格式 字符";
+	mso-style-link:"HTML 预设格式";
+	font-family:宋体;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:宋体;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:595.0pt 842.0pt;
+	margin:72.0pt 89.85pt 72.0pt 89.85pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoListParagraph align=left style='margin-left:31.5pt;text-align:left;
+text-indent:0cm;background:white'><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:dodgerblue'>func </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:lightseagreen'>basename</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#CC0866'>string</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>) </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#CC0866'>string </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:dodgerblue'>for </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:#D87093'>i </span><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:slategray'>:= </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:indianred'>len</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>) </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>- </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>&gt;= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>0</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>-- </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:dodgerblue'>if </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>[</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>] </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>== </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>'/'
+</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>[</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>+</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>:]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>break<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:black'>}<br>
+&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:dodgerblue'>for </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:#D87093'>i </span><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:slategray'>:= </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:indianred'>len</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>) </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>- </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>&gt;= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>0</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>-- </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:dodgerblue'>if </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>[</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>] </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>== </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>'.'
+</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>[:</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>break<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:black'>}<br>
+&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:dodgerblue'>return </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:#D87093'>s<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>}<br>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>func
+</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:lightseagreen'>basename2</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#CC0866'>string</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>) </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#CC0866'>string </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:#D87093'>slash </span><span lang=EN-US style='font-size:9.0pt;font-family:
+Monaco;color:slategray'>:= </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:black'>strings</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>LastIndex</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;/&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:#D87093'>s </span><span lang=EN-US style='font-size:9.0pt;font-family:
+Monaco;color:slategray'>= </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:#D87093'>s</span><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>[</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>slash</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>+</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>:]<br>
+<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:dodgerblue'>if </span><span lang=EN-US style='font-size:9.0pt;font-family:
+Monaco;color:#D87093'>dotIdx </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:slategray'>:= </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:black'>strings</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>LastIndex</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;.&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>dotIdx </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>&gt;= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>0 </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:#D87093'>s </span><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>[:</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>dotIdx</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>]<br>
+&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:dodgerblue'>return </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:#D87093'>s<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>}<br>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>func
+</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:lightseagreen'>int2String</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>values </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>[]</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#CC0866'>int</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>) </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#CC0866'>string </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:dodgerblue'>var </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:#D87093'>buf </span><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>bytes</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#CC0866'>Buffer<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:#D87093'>buf</span><span lang=EN-US style='font-size:9.0pt;font-family:
+Monaco;color:slategray'>.</span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:indianred'>WriteByte</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>'['</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>) </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dimgray'>//</span><span
+style='font-size:9.0pt;font-family:宋体;color:dimgray'>或者用</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dimgray'>buf.WriteRune()<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:dodgerblue'>for </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:#D87093'>i</span><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>v </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>:= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>range </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>values </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:dodgerblue'>if </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>&gt; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>0 </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>buf</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>WriteByte</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>','</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fmt</span><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:indianred'>Fprintf</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>&amp;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>buf</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;%d&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>v</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)<br>
+&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; </span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:#D87093'>buf</span><span lang=EN-US style='font-size:9.0pt;font-family:
+Monaco;color:slategray'>.</span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:indianred'>WriteByte</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>']'</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)<br>
+&nbsp; &nbsp;</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;
+color:dodgerblue'>return </span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:#D87093'>buf</span><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:indianred'>String</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>()<br>
+}<br>
+<br>
+</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>func
+</span><span lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:lightseagreen'>basenameMain</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>() {<br>
+&nbsp;&nbsp; fmt</span><span lang=EN-US style='font-size:9.0pt;font-family:
+Monaco;color:slategray'>.</span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:indianred'>Println</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>basename</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;./a/b/c/d.py/e.go&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>))<br>
+&nbsp;&nbsp; fmt</span><span lang=EN-US style='font-size:9.0pt;font-family:
+Monaco;color:slategray'>.</span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:indianred'>Println</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>basename2</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;./a/b/c/d.py/e.go&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>))<br>
+&nbsp;&nbsp; fmt</span><span lang=EN-US style='font-size:9.0pt;font-family:
+Monaco;color:slategray'>.</span><span lang=EN-US style='font-size:9.0pt;
+font-family:Monaco;color:indianred'>Println</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>int2String</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(([]</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#CC0866'>int</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>2</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>3</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>})))<br>
+}</span></p>
+
+<pre style='margin-left:31.5pt;background:white'><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>func </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:lightseagreen'>stringMain</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>() {</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>:= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;Hello, </span><span
+style='font-size:9.0pt;color:mediumvioletred'>世界</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:mediumvioletred'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>fmt</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Printf</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;% x&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; fmt</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Println</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>len</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)) </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dimgray'>// </span><span
+style='font-size:9.0pt;color:dimgray'>返回字符串中的字节数目</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:dimgray'>&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:black'>fmt</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Println</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;\xe4\xb8\x96 \xe7\x95\x8c&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; fmt</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Println</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;\u4e16 \u754c&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dimgray'>//fmt.Println('\xe4\xb8\x96') </span><span
+style='font-size:9.0pt;color:dimgray'>尽管是</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dimgray'>16bit</span><span
+style='font-size:9.0pt;color:dimgray'>仍不是合法</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dimgray'>rune</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:dimgray'>&nbsp;&nbsp; </span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:dimgray'>&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>for </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>:= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>0</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>&lt; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>len</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>r</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>size </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>:= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>utf8</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>DecodeRuneInString</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>[</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>:])</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dimgray'>// unicode</span><span
+style='font-size:9.0pt;color:dimgray'>解码器自动向后寻找至多三个字节</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:dimgray'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // </span><span
+style='font-size:9.0pt;color:dimgray'>高位是</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dimgray'>110</span><span
+style='font-size:9.0pt;color:dimgray'>为多字节码点开始</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dimgray'>, 10</span><span
+style='font-size:9.0pt;color:dimgray'>为多字节码点的某个字节开始</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:dimgray'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>fmt</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Printf</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;%d\t%c\n&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>r</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>+= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>size</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:#D87093'>&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:black'>}</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; </span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>for </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>r </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>:= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>range </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{ </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dimgray'>// </span><span
+style='font-size:9.0pt;color:dimgray'>在</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dimgray'>range</span><span
+style='font-size:9.0pt;color:dimgray'>中隐式解码</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dimgray'>Unicode, </span><span
+style='font-size:9.0pt;color:dimgray'>字节自动递增</span></pre><pre style='margin-left:
+31.5pt;background:white'><span lang=EN-US style='font-size:9.0pt;font-family:
+Monaco;color:dimgray'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:black'>fmt</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Printf</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;%d\t%q\t%#[2]x\n&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>r</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; }</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; fmt</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Println</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(utf8</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>RuneCountInString</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>))</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;</span><span
+style='font-size:9.0pt;color:mediumvioletred'>こんにちは</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:mediumvioletred'>&nbsp;&nbsp; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>fmt</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Printf</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;% x\n&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:#D87093'>r </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>:= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>[]</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#CC0866'>rune</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>s</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>) </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:dimgray'>// []rune</span><span
+style='font-size:9.0pt;color:dimgray'>接受</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dimgray'>string</span><span
+style='font-size:9.0pt;color:dimgray'>的转换</span></pre><pre style='margin-left:
+31.5pt;background:white'><span lang=EN-US style='font-size:9.0pt;font-family:
+Monaco;color:dimgray'>&nbsp;&nbsp; </span><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>fmt</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Printf</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;% x\n&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>r</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; fmt</span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Println</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#CC0866'>string</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>r</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>))</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco;color:dodgerblue'>for </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>:= </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:teal'>0</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>&lt; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>len</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>r</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>)</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>++ </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>{</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fmt</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:indianred'>Printf</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>(</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:mediumvioletred'>&quot;%d\t%c\n&quot;</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>r</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>[</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:9.0pt;font-family:Monaco;color:black'>])</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>&nbsp;&nbsp; }</span></pre><pre
+style='margin-left:31.5pt;background:white'><span lang=EN-US style='font-size:
+9.0pt;font-family:Monaco;color:black'>}</span></pre>
+
+<p class=MsoNormal style='margin-left:31.5pt'><span lang=EN-US
+style='font-size:9.0pt;font-family:Monaco'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
