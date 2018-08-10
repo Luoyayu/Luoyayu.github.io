@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>https://blog.luoyayu.cn/2018/07/21/2018-08-02-hello-world/</loc>
+    <lastmod>2018-08-10T09:15:47.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-07-21T13:10:51.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Blog" url="https://blog.luoyayu.cn/categories/Blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.luoyayu.cn/2018/08/10/2018-08-10-appleScript/</loc>
-    <lastmod>2018-08-10T08:26:47.000Z</lastmod>
+    <lastmod>2018-08-10T08:50:11.000Z</lastmod>
     <data>
         <display>
         <title>Apple Script</title>
@@ -390,27 +412,5 @@
     
     
     
-    
-  <url>
-    <loc>https://blog.luoyayu.cn/2018/07/21/2018-08-02-hello-world/</loc>
-    <lastmod>2018-08-05T07:29:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2018-07-21T13:10:51.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>life</tag>
-         
-         
-           
-             
-              <breadCrumb title="Blog" url="https://blog.luoyayu.cn/categories/Blog/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
 </urlset>
