@@ -30,15 +30,21 @@ pre
 	margin-bottom:.0001pt;
 	font-size:12.0pt;
 	font-family:宋体;}
+span.HTML
+	{mso-style-name:"HTML 预设格式 字符";
+	mso-style-link:"HTML 预设格式";
+	font-family:宋体;}
 p.msonormal0, li.msonormal0, div.msonormal0
 	{mso-style-name:msonormal;
 	margin-right:0cm;
 	margin-left:0cm;
 	font-size:12.0pt;
 	font-family:宋体;}
-span.HTML
-	{mso-style-name:"HTML 预设格式 字符";
-	mso-style-link:"HTML 预设格式";
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:10.0pt;
 	font-family:宋体;}
 .MsoChpDefault
 	{font-size:10.0pt;}
@@ -56,7 +62,7 @@ div.WordSection1
 
 <div class=WordSection1>
 
-<p class=MsoNormal style='margin-left:42.0pt;background:white'><span
+<p class=MsoNormal style='margin-left:12.0pt;background:white'><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#A020F0'>#include</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:mediumvioletred'>&lt;iostream&gt;<br>
 </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#A020F0'>#include</span><span
@@ -92,8 +98,8 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
 </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>struct
 </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>node
 </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>{<br>
-    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>int </span><span lang=EN-US style='font-size:10.5pt;
+&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:dodgerblue'>int </span><span lang=EN-US style='font-size:10.5pt;
 font-family:Monaco;color:#660E7A'>w</span><span lang=EN-US style='font-size:
 10.5pt;font-family:Monaco;color:slategray'>, </span><span lang=EN-US
 style='font-size:10.5pt;font-family:Monaco;color:#660E7A'>l</span><span
@@ -113,11 +119,10 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>cx</
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>node </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>cy</span><span
-lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) {<br>
-    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>return </span><span lang=EN-US style='font-size:10.5pt;
-font-family:Monaco;color:cornflowerblue'>cx</span><span lang=EN-US
-style='font-size:10.5pt;font-family:Monaco;color:slategray'>.</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) { </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>return </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>cx</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>.</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#660E7A'>l </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>== </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>cy</span><span
@@ -139,9 +144,8 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>&lt; </sp
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>cy</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>.</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#660E7A'>l</span><span
-lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>}<br>
-<br>
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>}<br>
 </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int
 </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>dp</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
@@ -168,8 +172,8 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span>
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>isStrict</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) {<br>
-    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:indianred'>memset</span><span lang=EN-US style='font-size:10.5pt;
+&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:indianred'>memset</span><span lang=EN-US style='font-size:10.5pt;
 font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
 10.5pt;font-family:Monaco;color:#D87093'>dp</span><span lang=EN-US
 style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
@@ -180,8 +184,8 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><spa
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>dp</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>))</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>for </span><span lang=EN-US style='font-size:10.5pt;
+&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:dodgerblue'>for </span><span lang=EN-US style='font-size:10.5pt;
 font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
 10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
 style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i </span><span
@@ -195,11 +199,11 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>; </span>
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>++</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)<br>
-        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>if </span><span lang=EN-US style='font-size:10.5pt;
-font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
-10.5pt;font-family:Monaco;color:cornflowerblue'>isStrict</span><span
-lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>if </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>isStrict</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>*</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:indianred'>lower_bound</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
@@ -219,11 +223,11 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><spa
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>else</span><span lang=EN-US style='font-size:10.5pt;
-font-family:Monaco;color:slategray'>*</span><span lang=EN-US style='font-size:
-10.5pt;font-family:Monaco;color:indianred'>upper_bound</span><span lang=EN-US
-style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>else </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>*</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:indianred'>upper_bound</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>dp</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>dp </span><span
@@ -240,8 +244,8 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><spa
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>return </span><span lang=EN-US style='font-size:10.5pt;
+&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:dodgerblue'>return </span><span lang=EN-US style='font-size:10.5pt;
 font-family:Monaco;color:indianred'>lower_bound</span><span lang=EN-US
 style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>dp</span><span
@@ -260,11 +264,11 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
 </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int
 </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:lightseagreen'>main</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>() {<br>
-    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:#371F80'>ios</span><span lang=EN-US style='font-size:10.5pt;font-family:
-Monaco;color:slategray'>::</span><span lang=EN-US style='font-size:10.5pt;
-font-family:Monaco;color:indianred'>sync_with_stdio</span><span lang=EN-US
-style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:#371F80'>ios</span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:slategray'>::</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:indianred'>sync_with_stdio</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>false</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
@@ -275,16 +279,16 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><spa
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>0</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>int </span><span lang=EN-US style='font-size:10.5pt;
+&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:dodgerblue'>int </span><span lang=EN-US style='font-size:10.5pt;
 font-family:Monaco;color:#D87093'>t</span><span lang=EN-US style='font-size:
 10.5pt;font-family:Monaco;color:slategray'>; </span><span lang=EN-US
 style='font-size:10.5pt;font-family:Monaco;color:#D87093'>cin </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>&gt;&gt; </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>t</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>for </span><span lang=EN-US style='font-size:10.5pt;
+&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:dodgerblue'>for </span><span lang=EN-US style='font-size:10.5pt;
 font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
 10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
 style='font-size:10.5pt;font-family:Monaco;color:#D87093'>kase </span><span
@@ -298,19 +302,19 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>; </span>
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>kase</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>++</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) {<br>
-        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>int </span><span lang=EN-US style='font-size:10.5pt;
-font-family:Monaco;color:#D87093'>n</span><span lang=EN-US style='font-size:
-10.5pt;font-family:Monaco;color:slategray'>; </span><span lang=EN-US
-style='font-size:10.5pt;font-family:Monaco;color:#D87093'>cin </span><span
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>n</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>cin </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>&gt;&gt; </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>n</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>for </span><span lang=EN-US style='font-size:10.5pt;
-font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
-10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
-style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i </span><span
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>for </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>= </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>0</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>; </span><span
@@ -320,7 +324,7 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>n</span><sp
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>; </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>++</span><span
-lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>cin </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>&gt;&gt; </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>a</span><span
@@ -337,11 +341,11 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]</span><spa
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>.</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#660E7A'>w</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:indianred'>sort</span><span lang=EN-US style='font-size:10.5pt;
-font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
-10.5pt;font-family:Monaco;color:#D87093'>a</span><span lang=EN-US
-style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:indianred'>sort</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>a </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>+ </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>n</span><span
@@ -349,11 +353,11 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span>
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:indianred'>cmp</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:dodgerblue'>for </span><span lang=EN-US style='font-size:10.5pt;
-font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
-10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
-style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i </span><span
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>for </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>= </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>n </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>- </span><span
@@ -369,7 +373,7 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i</span><sp
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>--, </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>j</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>++</span><span
-lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>pp</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>j</span><span
@@ -382,11 +386,11 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]</span><spa
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>.</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#660E7A'>w</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:#D87093'>cout </span><span lang=EN-US style='font-size:10.5pt;font-family:
-Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US style='font-size:10.5pt;
-font-family:Monaco;color:indianred'>LIS</span><span lang=EN-US
-style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:#D87093'>cout </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:indianred'>LIS</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>pp</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>n</span><span
@@ -396,11 +400,9 @@ lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) </span><sp
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>&lt;&lt; </span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:indianred'>endl</span><span
 lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
-    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
-color:orange'>}<br>
+&nbsp;&nbsp;&nbsp; </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:orange'>}<br>
 }</span></p>
-
-<p class=MsoNormal><span lang=EN-US style='font-size:10.5pt'>&nbsp;</span></p>
 
 </div>
 
