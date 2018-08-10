@@ -1,1 +1,444 @@
-<html><head><meta http-equiv=Content-Type content="text/html; charset=utf-8"><meta name=Generator content="Microsoft Word 15 (filtered)"><style></style></head><body lang=ZH-CN style='text-justify-trim:punctuation'><div class=WordSection1 style='layout-grid:15.6pt'><p class=MsoNormal align=left style='text-align:left;background:white'><spanlang=EN-US style='font-family:Monaco;color:#A020F0'>#include</span><spanlang=EN-US style='font-family:Monaco;color:mediumvioletred'>&lt;bits/stdc++.h&gt;<br><br></span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>usingnamespace</span><span lang=EN-US style='font-family:Monaco;color:teal'>std</span><spanlang=EN-US style='font-family:Monaco;color:slategray'>;<br></span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>const int</span><spanlang=EN-US style='font-family:Monaco;color:#D87093'>inf</span><spanlang=EN-US style='font-family:Monaco;color:slategray'>=</span><spanlang=EN-US style='font-family:Monaco;color:teal'>0x3f3f3f3f</span><spanlang=EN-US style='font-family:Monaco;color:slategray'>;<br></span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>const int</span><spanlang=EN-US style='font-family:Monaco;color:#D87093'>maxn</span><spanlang=EN-US style='font-family:Monaco;color:slategray'>=</span><spanlang=EN-US style='font-family:Monaco;color:teal'>22</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br></span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>typedeflong long</span><span lang=EN-US style='font-family:Monaco;color:#371F80'>ll</span><spanlang=EN-US style='font-family:Monaco;color:slategray'>;<br></span><span lang=EN-US style='font-family:Monaco;color:#A020F0'>#define</span><spanlang=EN-US style='font-family:Monaco;color:#1F542E'>cmax</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:black'>a</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:black'>b</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:black'>a</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>=</span><span lang=EN-USstyle='font-family:Monaco;color:black'>max</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:black'>a</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:black'>b</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)<br></span><span lang=EN-US style='font-family:Monaco;color:#A020F0'>#define</span><spanlang=EN-US style='font-family:Monaco;color:#1F542E'>cmin</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:black'>a</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:black'>b</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:black'>a</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>=</span><span lang=EN-USstyle='font-family:Monaco;color:black'>min</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:black'>a</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:black'>b</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)<br><br></span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int</span><spanlang=EN-US style='font-family:Monaco;color:#D87093'>a</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>maxn</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>]</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br></span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int</span><spanlang=EN-US style='font-family:Monaco;color:#D87093'>b</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>maxn</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>]</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>=</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>{</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>0</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>1</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>5</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>10</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>20</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>50</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>100</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>200</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>500</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>1000</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>2000</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>}</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br></span><span lang=EN-US style='font-family:Monaco;color:#371F80'>ll</span><spanlang=EN-US style='font-family:Monaco;color:#D87093'>sum</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>maxn</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>]</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br></span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int</span><spanlang=EN-US style='font-family:Monaco;color:#D87093'>ans</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br><br></span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>void</span><spanlang=EN-US style='font-family:Monaco;color:lightseagreen'>solve</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:#371F80'>ll</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>p</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:dodgerblue'>int</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:dodgerblue'>int</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>cnt</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>) {<br>   </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>if</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>p</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>&lt;</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>0</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:dodgerblue'>return</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br>   </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>if</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>!</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>&amp;&amp; !</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>p</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>) {</span><span lang=EN-USstyle='font-family:Monaco;color:dimgray'>// finishit<br>       </span><span lang=EN-US style='font-family:Monaco;color:#1F542E'>cmax</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>ans</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>cnt</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>);<br>       </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>return</span><spanlang=EN-US style='font-family:Monaco;color:slategray'>;<br>   </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>   </span><span lang=EN-US style='font-family:Monaco;color:#371F80'>ll</span><spanlang=EN-US style='font-family:Monaco;color:#D87093'>rp</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>=</span><span lang=EN-USstyle='font-family:Monaco;color:indianred'>max</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>0LL</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>p</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>-</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>sum</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>-</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>1</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>])</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;</span><span lang=EN-USstyle='font-family:Monaco;color:dimgray'>//</span><span style='font-family:宋体;color:dimgray'>后面的凑完了，还要凑多少钱</span><span lang=EN-US style='font-family:Monaco;color:dimgray'><br>   </span><span lang=EN-US style='font-family:Monaco;color:#371F80'>ll</span><spanlang=EN-US style='font-family:Monaco;color:#D87093'>nc</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>=</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>rp</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>/</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>b</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>]</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;</span><span lang=EN-USstyle='font-family:Monaco;color:dimgray'>//</span><span style='font-family:宋体;color:dimgray'>当前的面值能凑几张</span><span lang=EN-US style='font-family:Monaco;color:dimgray'><br>   </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>if</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>rp</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>%</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>b</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>])</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>nc</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>++;</span><span lang=EN-USstyle='font-family:Monaco;color:dimgray'>//<br>   </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>if</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>nc</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>&lt;=</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>a</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>])</span><span lang=EN-USstyle='font-family:Monaco;color:indianred'>solve</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>p</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>-</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>nc</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>*</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>b</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>]</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>-</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>1</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>cnt</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>+</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>nc</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;</span><span lang=EN-USstyle='font-family:Monaco;color:dimgray'>//</span><span style='font-family:宋体;color:dimgray'>考虑</span><span lang=EN-US style='font-family:Monaco;color:dimgray'>np</span><span style='font-family:宋体;color:dimgray'>奇偶性</span><spanlang=EN-US style='font-family:Monaco;color:dimgray'><br>   </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>if</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>nc</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>+</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>1</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>&lt;=</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>a</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>])</span><span lang=EN-USstyle='font-family:Monaco;color:indianred'>solve</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>p</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>-</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>nc</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>+</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>1</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>*</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>b</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>]</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>idx</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>-</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>1</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:cornflowerblue'>cnt</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>+</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>nc</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>+</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>1</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br></span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br><br></span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int</span><spanlang=EN-US style='font-family:Monaco;color:lightseagreen'>main</span><spanlang=EN-US style='font-family:Monaco;color:orange'>() {<br>   </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int</span><spanlang=EN-US style='font-family:Monaco;color:#D87093'>t</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br>   </span><span lang=EN-US style='font-family:Monaco;color:indianred'>scanf</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>%d</span><span lang=EN-USstyle='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>, &amp;</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>t</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br>   </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>while</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>t</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>--</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>) {<br>       </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>p</span><spanlang=EN-US style='font-family:Monaco;color:slategray'>;<br>       </span><span lang=EN-US style='font-family:Monaco;color:indianred'>scanf</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>%d</span><span lang=EN-USstyle='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>, &amp;</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>p</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br>       </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>for</span><span lang=EN-US style='font-family:Monaco;color:orange'>(</span><spanlang=EN-US style='font-family:Monaco;color:dodgerblue'>int</span><spanlang=EN-US style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>=</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>1</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>i</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>&lt;=</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>10</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>i</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>++</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>) {<br>           </span><span lang=EN-US style='font-family:Monaco;color:indianred'>scanf</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>%d</span><span lang=EN-USstyle='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>, &amp;</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>a</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>i</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>])</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br>           </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>sum</span><spanlang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>i</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>]</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>=</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>sum</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>i</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>-</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>1</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>]</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>+</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:#371F80'>ll</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>b</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>i</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>]</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>*</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>a</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>[</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>i</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>]</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br>       </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>       </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>ans</span><spanlang=EN-US style='font-family:Monaco;color:slategray'>= -</span><spanlang=EN-US style='font-family:Monaco;color:teal'>1</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br>       </span><span lang=EN-US style='font-family:Monaco;color:indianred'>solve</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>p</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>10</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>0</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br>       </span><span lang=EN-US style='font-family:Monaco;color:indianred'>printf</span><spanlang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-USstyle='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-USstyle='font-family:Monaco;color:teal'>%d\n</span><span lang=EN-USstyle='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>,</span><span lang=EN-USstyle='font-family:Monaco;color:#D87093'>ans</span><span lang=EN-USstyle='font-family:Monaco;color:orange'>)</span><span lang=EN-USstyle='font-family:Monaco;color:slategray'>;<br>   </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br></span><span lang=EN-US style='font-family:Monaco;color:black'>}</span></p><p class=MsoNormal><span lang=EN-US>&nbsp;</span></p></div></body></html>
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Monaco;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:宋体;}
+pre
+	{mso-style-link:"HTML 预设格式 字符";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:宋体;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:宋体;}
+span.HTML
+	{mso-style-name:"HTML 预设格式 字符";
+	mso-style-link:"HTML 预设格式";
+	font-family:宋体;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=WordSection1>
+
+<p class=MsoNormal style='margin-left:21.0pt;background:white'><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#A020F0'>#include</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:mediumvioletred'>&lt;bits/stdc++.h&gt;<br>
+<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>using
+namespace </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:teal'>std</span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>const
+int </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:#D87093'>inf </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:slategray'>= </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:teal'>0x3f3f3f3f</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>const
+int </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:#D87093'>maxn </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:slategray'>= </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:teal'>22</span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>typedef
+long long </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:#371F80'>ll</span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#A020F0'>#define
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#1F542E'>cmax</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>b</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>=</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>max</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>,</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>b</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#A020F0'>#define
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#1F542E'>cmin</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>b</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>=</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>min</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>,</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:black'>b</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)<br>
+<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>maxn</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>b</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>maxn</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>] </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>{</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>0</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>5</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>10</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>20</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>50</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>100</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>200</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>500</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>1000</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>2000</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>}</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#371F80'>ll
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>sum</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>maxn</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>ans</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>void
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:lightseagreen'>solve</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#371F80'>ll </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>p</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>cnt</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) {<br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:dodgerblue'>if </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:cornflowerblue'>p </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:slategray'>&lt; </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>0</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>return</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:dodgerblue'>if </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:slategray'>!</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>&amp;&amp;
+!</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>p</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) { </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dimgray'>//
+finishit<br>
+        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:#1F542E'>cmax</span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:orange'>(</span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:#D87093'>ans</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>cnt</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>);<br>
+        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:dodgerblue'>return</span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:orange'>}<br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:#371F80'>ll </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:#D87093'>rp </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:slategray'>= </span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:indianred'>max</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>0ll</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>p </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>- </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>sum</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>-
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>])</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dimgray'>//</span><span
+style='font-size:10.5pt;color:dimgray'>后面的凑完了，还要凑多少钱</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:dimgray'><br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:#371F80'>ll </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:#D87093'>nc </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:slategray'>= </span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:#D87093'>rp </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:slategray'>/ </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>b</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dimgray'>//</span><span
+style='font-size:10.5pt;color:dimgray'>当前的面值能凑几张</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:dimgray'><br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:dodgerblue'>if </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:#D87093'>rp </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:slategray'>% </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>b</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]) </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>nc</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>++;<br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:dodgerblue'>if </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:#D87093'>nc </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:slategray'>&lt;= </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]) </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:indianred'>solve</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>p </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>- </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>nc </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>* </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>b</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>-
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>cnt
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>+
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>nc</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dimgray'>//</span><span
+style='font-size:10.5pt;color:dimgray'>考虑</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:dimgray'>np</span><span
+style='font-size:10.5pt;color:dimgray'>奇偶性</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:dimgray'><br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:dodgerblue'>if </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:#D87093'>nc </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:slategray'>+ </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>1 </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>&lt;= </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]) </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:indianred'>solve</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>p </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>- </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>nc </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>+ </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>* </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>b</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>idx
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>-
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:cornflowerblue'>cnt
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>+
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>nc
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>+
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>}<br>
+<br>
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:lightseagreen'>main</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>() {<br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:dodgerblue'>int </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:#D87093'>t</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:slategray'>; </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:indianred'>scanf</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:mediumvioletred'>&quot;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>%d</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:mediumvioletred'>&quot;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, &amp;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>t</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:dodgerblue'>while </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:#D87093'>t</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:slategray'>--</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) {<br>
+        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:dodgerblue'>int </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:#D87093'>p</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:slategray'>; </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:indianred'>scanf</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:mediumvioletred'>&quot;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>%d</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:mediumvioletred'>&quot;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, &amp;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>p</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:dodgerblue'>for </span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>&lt;= </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>10</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>; </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>++</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) {<br>
+            </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:indianred'>scanf</span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:teal'>%d</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:mediumvioletred'>&quot;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, &amp;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>])</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+            </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:#D87093'>sum</span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:orange'>[</span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:#D87093'>i</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>sum</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>- </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>1</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>] </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>+ </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#371F80'>ll</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>) </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>b</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>] </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>* </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>a</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>[</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>i</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>]</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:orange'>}<br>
+        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:#D87093'>ans </span><span lang=EN-US style='font-size:10.5pt;font-family:
+Monaco;color:slategray'>= -</span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:teal'>1</span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:indianred'>solve</span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:#D87093'>p</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>10</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:teal'>0</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:indianred'>printf</span><span lang=EN-US style='font-size:10.5pt;
+font-family:Monaco;color:orange'>(</span><span lang=EN-US style='font-size:
+10.5pt;font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-US
+style='font-size:10.5pt;font-family:Monaco;color:teal'>%d\n</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:mediumvioletred'>&quot;</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:#D87093'>ans</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:orange'>)</span><span
+lang=EN-US style='font-size:10.5pt;font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-size:10.5pt;font-family:Monaco;
+color:orange'>}<br>
+}</span></p>
+
+</div>
+
+</body>
+
+</html>
