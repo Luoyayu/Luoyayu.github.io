@@ -13,10 +13,21 @@
 	{font-family:"Cambria Math";
 	panose-1:2 4 5 3 5 4 6 3 2 4;}
 @font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
 	{font-family:"Source Code Pro";
 	panose-1:2 11 5 9 3 4 3 2 2 4;}
 @font-face
 	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Hiragino Sans GB W3";
+	panose-1:2 11 3 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@Hiragino Sans GB W3";}
+@font-face
+	{font-family:"\@等线";
 	panose-1:2 1 6 0 3 1 1 1 1 1;}
  /* Style Definitions */
  p.MsoNormal, li.MsoNormal, div.MsoNormal
@@ -26,10 +37,22 @@
 	text-justify:inter-ideograph;
 	font-size:10.5pt;
 	font-family:DengXian;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:宋体;}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:DengXian;}
 .MsoChpDefault
-	{font-family:DengXian;}
- /* Page Definitions */
- @page WordSection1
+	{font-size:10.0pt;
+	font-family:DengXian;}
+@page WordSection1
 	{size:595.0pt 842.0pt;
 	margin:72.0pt 90.0pt 72.0pt 90.0pt;
 	layout-grid:15.6pt;}
@@ -47,8 +70,8 @@ div.WordSection1
 <p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
 background:white'><span lang=EN-US style='font-family:"Source Code Pro";
 color:#4B83CD'>tell</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#7A3E9D'>application</span><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'> </span><b><span lang=EN-US style='font-family:"Source Code Pro";
+color:#7A3E9D'>application</span></b><span lang=EN-US style='font-family:"Source Code Pro";
 color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
 color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
 color:#448C27'>System Events</span><span lang=EN-US style='font-family:"Source Code Pro";
@@ -56,109 +79,179 @@ color:#777777'>&quot;</span></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
 background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>    </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#4B83CD'>tell</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#7A3E9D'>application</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#448C27'>Finder</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>to</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AA3731'>activate</span></p>
+color:#777777'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>-- </span><span
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>前提：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Hiragino Sans GB W3",sans-serif;
+color:#777777'>&nbsp;&nbsp;&nbsp;&nbsp;   </span><span lang=EN-US
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>-- 1. </span><span
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>在<span
+lang=EN-US>iCloud</span>云盘下新建<span lang=EN-US>Bear</span>文件夹</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Hiragino Sans GB W3",sans-serif;
+color:#777777'>&nbsp;&nbsp;&nbsp;&nbsp;   </span><span lang=EN-US
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>-- 2. </span><span
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>在<span
+lang=EN-US>Bear</span>下手动备份一次，文件<span lang=EN-US>-&gt;</span>备份笔记<span
+lang=EN-US>-&gt;</span>选中<span lang=EN-US>Bear</span>文件夹</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Hiragino Sans GB W3",sans-serif;
+color:#777777'>&nbsp;&nbsp;&nbsp;&nbsp;   </span><span lang=EN-US
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>-- </span><span
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>脚本做的事：</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Hiragino Sans GB W3",sans-serif;
+color:#777777'>&nbsp;&nbsp;&nbsp;&nbsp;   </span><span lang=EN-US
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>-- 1. </span><span
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>删除已有备份</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Hiragino Sans GB W3",sans-serif;
+color:#777777'>&nbsp;&nbsp;&nbsp;&nbsp;   </span><span lang=EN-US
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>-- 2. </span><span
+style='font-family:"Hiragino Sans GB W3",sans-serif;color:#AAAAAA'>自动化点击</span></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
 background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>    </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AA3731'>key code</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AB6526'>34</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> using </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>{</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>shift down</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>,</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> command down</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>}</span></p>
-
-<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
-background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>    </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AA3731'>do shell script</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#448C27'>cd ~;cd 'Library/Mobile Documents/com~apple~CloudDocs/Bear/';rm
-B*</span><span lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span></p>
-
-<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
-background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>    </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AA3731'>key code</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AB6526'>13</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> using </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>{</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>command down</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>}</span></p>
-
-<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
-background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>    </span></p>
-
-<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
-background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>    </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#4B83CD'>tell</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#7A3E9D'>application</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#448C27'>Bear</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>to</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AA3731'>activate</span></p>
-
-<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
-background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>    </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#4B83CD'>tell</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> process </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#448C27'>Bear</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span></p>
-
-<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
-background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>        </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#4B83CD'>set</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#7A3E9D'>frontmost</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#4B83CD'>to</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AB6526'>true</span></p>
-
-<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
-background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>        click menu </span><span lang=EN-US style='font-family:
-"Source Code Pro";color:#AA3731'>item</span><span lang=EN-US style='font-family:
-"Source Code Pro";color:#333333'> </span><span lang=EN-US style='font-family:
-"Source Code Pro";color:#777777'>&quot;</span><span style='font-family:宋体;
-color:#448C27'>备份笔记</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#448C27'>...</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#4B83CD'>of</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> menu </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span style='font-family:宋体;color:#448C27'>文件</span><span
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#4B83CD'>tell</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#7A3E9D'>application</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#448C27'>Finder</span><span
 lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
 lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>to</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AA3731'>activate</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>-- </span><span
+style='font-family:宋体;color:#AAAAAA'>打开</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#AAAAAA'>Finder</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span lang=EN-US
+style='font-family:"Source Code Pro";color:#AA3731'>key code</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AB6526'>34</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> using </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>{</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'>shift down</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>,</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> command down</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>}</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>-- </span><span
+lang=EN-US style='font-family:"Cambria Math",serif;color:#AAAAAA'>⇧</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>+</span><span
+lang=EN-US style='font-family:"Cambria Math",serif;color:#AAAAAA'>⌘</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>+I </span><span
+style='font-family:宋体;color:#AAAAAA'>进入</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#AAAAAA'>iCloud</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span lang=EN-US
+style='font-family:"Source Code Pro";color:#AA3731'>do shell script</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#448C27'>cd ~;cd
+'Library/Mobile Documents/com~apple~CloudDocs/Bear/';rm B*</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>-- </span><span
+style='font-family:宋体;color:#AAAAAA'>删除已有备份</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span lang=EN-US
+style='font-family:"Source Code Pro";color:#AA3731'>key code</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AB6526'>13</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> using </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>{</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'>command down</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>}</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>-- </span><span
+lang=EN-US style='font-family:"Cambria Math",serif;color:#AAAAAA'>⌘</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>+W </span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span lang=EN-US
+style='font-family:"Source Code Pro";color:#AA3731'>delay</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AB6526'>1</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#4B83CD'>tell</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#7A3E9D'>application</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#448C27'>Bear</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>to</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AA3731'>activate</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>-- </span><span
+style='font-family:宋体;color:#AAAAAA'>打开</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#AAAAAA'>Bear</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#4B83CD'>tell</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> process </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#448C27'>Bear</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#4B83CD'>set</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#7A3E9D'>frontmost</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#4B83CD'>to</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AB6526'>true</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>-- </span><span
+style='font-family:宋体;color:#AAAAAA'>置于前台</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;click menu </span><b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AA3731'>item</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+style='font-family:宋体;color:#448C27'>备份笔记</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#448C27'>...</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
 lang=EN-US style='font-family:"Source Code Pro";color:#4B83CD'>of</span><span
-lang=EN-US style='font-family:"Source Code Pro";color:#333333'> menu bar </span><span
-lang=EN-US style='font-family:"Source Code Pro";color:#AA3731'>item</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> menu </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+style='font-family:宋体;color:#448C27'>文件</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#4B83CD'>of</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> menu bar </span><b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AA3731'>item</span></b><span
 lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
 lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
 style='font-family:宋体;color:#448C27'>文件</span><span lang=EN-US
@@ -166,67 +259,78 @@ style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
 lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
 lang=EN-US style='font-family:"Source Code Pro";color:#4B83CD'>of</span><span
 lang=EN-US style='font-family:"Source Code Pro";color:#333333'> menu bar </span><span
-lang=EN-US style='font-family:"Source Code Pro";color:#AB6526'>1</span></p>
+lang=EN-US style='font-family:"Source Code Pro";color:#AB6526'>1</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>-- </span><span
+style='font-family:宋体;color:#AAAAAA'>点击文件</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#AAAAAA'>-&gt;</span><span
+style='font-family:宋体;color:#AAAAAA'>备份笔记</span></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
 background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>        click button </span><span lang=EN-US style='font-family:
-"Source Code Pro";color:#777777'>&quot;</span><span style='font-family:宋体;
-color:#448C27'>导出笔记</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#4B83CD'>of</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> window </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span style='font-family:宋体;color:#448C27'>请选择保存笔记的位置</span><span
-lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span></p>
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;click button </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+style='font-family:宋体;color:#448C27'>导出笔记</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#4B83CD'>of</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> window </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+style='font-family:宋体;color:#448C27'>请选择保存笔记的位置</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#777777'>&quot;</span></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
 background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>        key code </span><span lang=EN-US style='font-family:
-"Source Code Pro";color:#AB6526'>13</span><span lang=EN-US style='font-family:
-"Source Code Pro";color:#333333'> using </span><span lang=EN-US
-style='font-family:"Source Code Pro";color:#777777'>{</span><span lang=EN-US
-style='font-family:"Source Code Pro";color:#333333'>command down</span><span
-lang=EN-US style='font-family:"Source Code Pro";color:#777777'>}</span></p>
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;key code </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AB6526'>13</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> using </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>{</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'>command down</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>}</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>-- </span><span
+lang=EN-US style='font-family:"Cambria Math",serif;color:#AAAAAA'>⌘</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>+W</span></p>
 
 <p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
 background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>    </span><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#4B83CD'>end tell</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span lang=EN-US
+style='font-family:"Source Code Pro";color:#4B83CD'>tell</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#7A3E9D'>application</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#448C27'>Finder</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>&quot;</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>to</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AA3731'>activate</span></b></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
+color:#333333'>&nbsp;&nbsp;&nbsp;&nbsp;</span><b><span lang=EN-US
+style='font-family:"Source Code Pro";color:#AA3731'>key code</span></b><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AB6526'>13</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'> using </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>{</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#333333'>command down</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#777777'>} </span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>-- </span><span
+lang=EN-US style='font-family:"Cambria Math",serif;color:#AAAAAA'>⌘</span><span
+lang=EN-US style='font-family:"Source Code Pro";color:#AAAAAA'>+W</span></p>
+
+<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
+background:white'><span lang=EN-US style='font-family:"Source Code Pro";
 color:#4B83CD'>end tell</span></p>
 
-<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
-background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>    </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#4B83CD'>tell</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#7A3E9D'>application</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#448C27'>Finder</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>&quot;</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>to</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AA3731'>activate</span></p>
-
-<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
-background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>    </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AA3731'>key code</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AB6526'>13</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> using </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>{</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'>command down</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#777777'>}</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#333333'> </span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AAAAAA'>-- </span><span lang=EN-US style='font-family:"Cambria Math",serif;
-color:#AAAAAA'>⌘</span><span lang=EN-US style='font-family:"Source Code Pro";
-color:#AAAAAA'>+W  </span></p>
-
-<p class=MsoNormal align=left style='text-align:left;line-height:16.5pt;
-background:white'><span lang=EN-US style='font-family:"Source Code Pro";
-color:#4B83CD'>end tell</span></p>
+<p class=MsoNormal style='background:white'><span lang=EN-US>&nbsp;</span></p>
 
 </div>
 
