@@ -1,0 +1,468 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Monaco;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:DengXian;}
+pre
+	{mso-style-link:"HTML 预设格式 字符";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:宋体;}
+span.HTML
+	{mso-style-name:"HTML 预设格式 字符";
+	mso-style-link:"HTML 预设格式";
+	font-family:宋体;}
+.MsoChpDefault
+	{font-family:DengXian;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.0pt 842.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=left style='text-align:left;background:white'><span
+lang=EN-US style='font-family:Monaco;color:olive'>#include </span><span
+lang=EN-US style='font-family:Monaco;color:green'>&lt;bits/stdc++.h&gt;<br>
+<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>using
+namespace </span><span lang=EN-US style='font-family:Monaco;color:teal'>std</span><span
+lang=EN-US style='font-family:Monaco;color:black'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:olive'>#define </span><span
+lang=EN-US style='font-family:Monaco;color:#36A35F'>clr</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:black'>a</span><span lang=EN-US
+style='font-family:Monaco;color:black'>, b</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>) </span><span lang=EN-US
+style='font-family:Monaco;color:black'>memset</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:black'>a</span><span lang=EN-US
+style='font-family:Monaco;color:black'>,b,</span><span lang=EN-US
+style='font-family:Monaco;color:#3B73A3'>sizeof</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:black'>a</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>))<br>
+<br>
+</span><span lang=EN-US style='font-family:Monaco;color:olive'>#ifdef </span><span
+lang=EN-US style='font-family:Monaco;color:black'>__LOCAL_DEBUG__<br>
+</span><span lang=EN-US style='font-family:Monaco;color:olive'>#define </span><span
+lang=EN-US style='font-family:Monaco;color:#36A35F'>_debug</span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:black'>fmt</span><span lang=EN-US
+style='font-family:Monaco;color:black'>,...</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>)</span><span lang=EN-US
+style='font-family:Monaco;color:black'>fprintf</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#36A35F'>stderr</span><span lang=EN-US
+style='font-family:Monaco;color:black'>,</span><span lang=EN-US
+style='font-family:Monaco;color:green'>&quot;\033[94m%s: &quot; </span><span
+lang=EN-US style='font-family:Monaco;color:black'>fmt </span><span lang=EN-US
+style='font-family:Monaco;color:green'>&quot;\n\033[0m&quot;</span><span
+lang=EN-US style='font-family:Monaco;color:black'>,</span><span lang=EN-US
+style='font-family:Monaco;color:#36A35F'>__func__</span><span lang=EN-US
+style='font-family:Monaco;color:black'>,##__VA_ARGS__</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>)<br>
+</span><span lang=EN-US style='font-family:Monaco;color:olive'>#define </span><span
+lang=EN-US style='font-family:Monaco;color:#36A35F'>dg</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:black'>a</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>) </span><span lang=EN-US
+style='font-family:Monaco;color:black'>cout &lt;&lt;</span><span lang=EN-US
+style='font-family:Monaco;color:green'>&quot;\033[94m&quot; </span><span
+lang=EN-US style='font-family:Monaco;color:black'>&lt;&lt;#a &lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:green'>&quot;\033[0m = &quot;</span><span
+lang=EN-US style='font-family:Monaco;color:black'>&lt;&lt; a &lt;&lt; endl;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:olive'>#define </span><span
+lang=EN-US style='font-family:Monaco;color:#36A35F'>dgloop</span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:black'>v</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>) {</span><span lang=EN-US
+style='font-family:Monaco;color:#3B73A3'>for</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#3B73A3'>auto </span><span lang=EN-US
+style='font-family:Monaco;color:black'>x:v</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>) </span><span lang=EN-US
+style='font-family:Monaco;color:black'>cout &lt;&lt;</span><span lang=EN-US
+style='font-family:Monaco;color:green'>&quot;\033[94m&quot;</span><span
+lang=EN-US style='font-family:Monaco;color:black'>&lt;&lt;x&lt;&lt;</span><span
+lang=EN-US style='font-family:Monaco;color:green'>&quot;\033[0m &quot;</span><span
+lang=EN-US style='font-family:Monaco;color:black'>;cout&lt;&lt;endl;</span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>}<br>
+</span><span lang=EN-US style='font-family:Monaco;color:olive'>#else<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#217072'>#define
+_debug(...) ((void)0)<br>
+#define dg(a)((void)0)<br>
+#define dgloop(v)((void)0)<br>
+</span><span lang=EN-US style='font-family:Monaco;color:olive'>#endif<br>
+<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>const int </span><span
+lang=EN-US style='font-family:Monaco;color:#B17DB8'>mod </span><span
+lang=EN-US style='font-family:Monaco;color:black'>= </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1e9 </span><span lang=EN-US
+style='font-family:Monaco;color:black'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>7</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>const int </span><span
+lang=EN-US style='font-family:Monaco;color:#B17DB8'>maxn </span><span
+lang=EN-US style='font-family:Monaco;color:black'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#3B73A3'>static_cast</span><span lang=EN-US
+style='font-family:Monaco;color:black'>&lt;</span><span lang=EN-US
+style='font-family:Monaco;color:#3B73A3'>int</span><span lang=EN-US
+style='font-family:Monaco;color:black'>&gt;</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1e6 </span><span lang=EN-US
+style='font-family:Monaco;color:black'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>7</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>)</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>const int </span><span
+lang=EN-US style='font-family:Monaco;color:#B17DB8'>maxm </span><span
+lang=EN-US style='font-family:Monaco;color:black'>= </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1e4 </span><span lang=EN-US
+style='font-family:Monaco;color:black'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>7</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#B17DB8'>a</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#B17DB8'>maxn</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>]</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#B17DB8'>vis</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#B17DB8'>maxm</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>]</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#866605'>main</span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>() {<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#371F80'>ios</span><span
+lang=EN-US style='font-family:Monaco;color:black'>::</span><span lang=EN-US
+style='font-family:Monaco;color:#7915CF'>sync_with_stdio</span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#3B73A3'>false</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>)</span><span lang=EN-US
+style='font-family:Monaco;color:black'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#B17DB8'>cin</span><span lang=EN-US
+style='font-family:Monaco;color:black'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#7915CF'>tie</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#3B73A3'>nullptr</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>)</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>t</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#B17DB8'>cin </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>&gt;&gt; </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>t</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>while </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>(t</span><span lang=EN-US
+style='font-family:Monaco;color:black'>--</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>) {<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>n</span><span lang=EN-US
+style='font-family:Monaco;color:black'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#B17DB8'>cin </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&gt;&gt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>n</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#36A35F'>clr</span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#B17DB8'>vis</span><span lang=EN-US
+style='font-family:Monaco;color:black'>, </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>0</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>);<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:teal'>vector</span><span
+lang=EN-US style='font-family:Monaco;color:black'>&lt;</span><span lang=EN-US
+style='font-family:Monaco;color:#3B73A3'>int</span><span lang=EN-US
+style='font-family:Monaco;color:black'>&gt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>flag </span><span
+lang=EN-US style='font-family:Monaco;color:black'>= </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>0</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>for </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#3B73A3'>int </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>i </span><span lang=EN-US
+style='font-family:Monaco;color:black'>= </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>0</span><span lang=EN-US
+style='font-family:Monaco;color:black'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>i </span><span lang=EN-US
+style='font-family:Monaco;color:black'>&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>n</span><span lang=EN-US
+style='font-family:Monaco;color:black'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>i</span><span lang=EN-US
+style='font-family:Monaco;color:black'>++</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>) {<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#B17DB8'>cin
+</span><span lang=EN-US style='font-family:Monaco;color:teal'>&gt;&gt; </span><span
+lang=EN-US style='font-family:Monaco;color:#B17DB8'>a</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>[i]</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#B17DB8'>vis</span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#B17DB8'>a</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>[i]]</span><span lang=EN-US
+style='font-family:Monaco;color:black'>++;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>if
+</span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>(</span><span
+lang=EN-US style='font-family:Monaco;color:#B17DB8'>vis</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#B17DB8'>a</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>[i]] </span><span lang=EN-US
+style='font-family:Monaco;color:black'>% </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>2 </span><span lang=EN-US
+style='font-family:Monaco;color:black'>== </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>0</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>) v</span><span lang=EN-US
+style='font-family:Monaco;color:black'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#7915CF'>push_back</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#B17DB8'>a</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>[i])</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>if
+</span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>(</span><span
+lang=EN-US style='font-family:Monaco;color:#B17DB8'>vis</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#B17DB8'>a</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>[i]] </span><span lang=EN-US
+style='font-family:Monaco;color:black'>% </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>4 </span><span lang=EN-US
+style='font-family:Monaco;color:black'>== </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>0</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>) flag </span><span lang=EN-US
+style='font-family:Monaco;color:black'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#B17DB8'>a</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>[i]</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>}<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>if </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>(v</span><span lang=EN-US
+style='font-family:Monaco;color:black'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#7915CF'>size</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>() </span><span lang=EN-US
+style='font-family:Monaco;color:black'>== </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>2</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>) {<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#B17DB8'>cout
+</span><span lang=EN-US style='font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>v[</span><span lang=EN-US
+style='font-family:Monaco;color:blue'>0</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>] </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:green'>&quot; &quot; </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[</span><span lang=EN-US
+style='font-family:Monaco;color:blue'>0</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>] </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:green'>&quot; &quot; </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[</span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>] </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:green'>&quot; &quot; </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[</span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>] </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#7915CF'>endl</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>continue</span><span
+lang=EN-US style='font-family:Monaco;color:black'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>} </span><span
+lang=EN-US style='font-family:Monaco;color:#3B73A3'>else if </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>(flag) {<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#B17DB8'>cout
+</span><span lang=EN-US style='font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>flag </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:green'>&quot; &quot; </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>flag </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:green'>&quot; &quot; </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>flag </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:green'>&quot; &quot; </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>flag </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:#7915CF'>endl</span><span
+lang=EN-US style='font-family:Monaco;color:black'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>continue</span><span
+lang=EN-US style='font-family:Monaco;color:black'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>}<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#7915CF'>sort</span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>(v</span><span lang=EN-US
+style='font-family:Monaco;color:black'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#7915CF'>begin</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>()</span><span lang=EN-US
+style='font-family:Monaco;color:black'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v</span><span lang=EN-US
+style='font-family:Monaco;color:black'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#7915CF'>end</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>())</span><span lang=EN-US
+style='font-family:Monaco;color:black'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#36A35F'>dgloop</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>(v);<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>p1</span><span lang=EN-US
+style='font-family:Monaco;color:black'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>p2</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>double
+</span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>MIN </span><span
+lang=EN-US style='font-family:Monaco;color:black'>= </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1e20</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>for </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#3B73A3'>int </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>i </span><span lang=EN-US
+style='font-family:Monaco;color:black'>= </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>0</span><span lang=EN-US
+style='font-family:Monaco;color:black'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>i </span><span lang=EN-US
+style='font-family:Monaco;color:black'>&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v</span><span lang=EN-US
+style='font-family:Monaco;color:black'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#7915CF'>size</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>() </span><span lang=EN-US
+style='font-family:Monaco;color:black'>- </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1</span><span lang=EN-US
+style='font-family:Monaco;color:black'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>i</span><span lang=EN-US
+style='font-family:Monaco;color:black'>++</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>) {<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#3B73A3'>if
+</span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>(</span><span
+lang=EN-US style='font-family:Monaco;color:blue'>1.0 </span><span lang=EN-US
+style='font-family:Monaco;color:black'>* </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[i] </span><span lang=EN-US
+style='font-family:Monaco;color:black'>/ </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[i </span><span lang=EN-US
+style='font-family:Monaco;color:black'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>] </span><span lang=EN-US
+style='font-family:Monaco;color:black'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1.0 </span><span lang=EN-US
+style='font-family:Monaco;color:black'>* </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[i </span><span lang=EN-US
+style='font-family:Monaco;color:black'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>] </span><span lang=EN-US
+style='font-family:Monaco;color:black'>/ </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[i] </span><span lang=EN-US
+style='font-family:Monaco;color:black'>&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>MIN) {<br>
+                MIN </span><span lang=EN-US style='font-family:Monaco;
+color:black'>= </span><span lang=EN-US style='font-family:Monaco;color:blue'>1.0
+</span><span lang=EN-US style='font-family:Monaco;color:black'>* </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>v[i] </span><span
+lang=EN-US style='font-family:Monaco;color:black'>/ </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[i </span><span lang=EN-US
+style='font-family:Monaco;color:black'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>] </span><span lang=EN-US
+style='font-family:Monaco;color:black'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1.0 </span><span lang=EN-US
+style='font-family:Monaco;color:black'>* </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[i </span><span lang=EN-US
+style='font-family:Monaco;color:black'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>] </span><span lang=EN-US
+style='font-family:Monaco;color:black'>/ </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[i]</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+                </span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>p1
+</span><span lang=EN-US style='font-family:Monaco;color:black'>= </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>v[i]</span><span
+lang=EN-US style='font-family:Monaco;color:black'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>p2 </span><span lang=EN-US
+style='font-family:Monaco;color:black'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>v[i </span><span lang=EN-US
+style='font-family:Monaco;color:black'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:blue'>1</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>]</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>}<br>
+        }<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#B17DB8'>cout </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>&lt;&lt; </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>p1 </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:green'>&quot; &quot; </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>p1 </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:green'>&quot; &quot; </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>p2 </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:green'>&quot; &quot; </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>p2 </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>&lt;&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#7915CF'>endl</span><span lang=EN-US
+style='font-family:Monaco;color:black'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>}<br>
+}</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
