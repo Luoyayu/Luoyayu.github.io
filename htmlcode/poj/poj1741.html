@@ -1,0 +1,837 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:宋体;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:Monaco;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@宋体";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:DengXian;}
+pre
+	{mso-style-link:"HTML 预设格式 字符";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:宋体;}
+span.HTML
+	{mso-style-name:"HTML 预设格式 字符";
+	mso-style-link:"HTML 预设格式";
+	font-family:宋体;}
+p.msonormal0, li.msonormal0, div.msonormal0
+	{mso-style-name:msonormal;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:宋体;}
+p.msochpdefault, li.msochpdefault, div.msochpdefault
+	{mso-style-name:msochpdefault;
+	margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:DengXian;}
+span.shpreproc
+	{mso-style-name:sh_preproc;}
+span.shstring
+	{mso-style-name:sh_string;}
+span.shkeyword
+	{mso-style-name:sh_keyword;}
+span.shsymbol
+	{mso-style-name:sh_symbol;}
+span.shtype
+	{mso-style-name:sh_type;}
+span.shnumber
+	{mso-style-name:sh_number;}
+span.shnormal
+	{mso-style-name:sh_normal;}
+span.shclassname
+	{mso-style-name:sh_classname;}
+span.shcbracket
+	{mso-style-name:sh_cbracket;}
+span.shfunction
+	{mso-style-name:sh_function;}
+span.shcomment
+	{mso-style-name:sh_comment;}
+span.shspecialchar
+	{mso-style-name:sh_specialchar;}
+.MsoChpDefault
+	{font-size:10.0pt;
+	font-family:DengXian;}
+@page WordSection1
+	{size:595.0pt 842.0pt;
+	margin:72.0pt 90.0pt 72.0pt 90.0pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoNormal align=left style='margin-left:21.0pt;text-align:left;
+background:white'><span lang=EN-US style='font-family:Monaco;color:#A020F0'>#include
+</span><span lang=EN-US style='font-family:Monaco;color:mediumvioletred'>&lt;cstdio&gt;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#A020F0'>#include </span><span
+lang=EN-US style='font-family:Monaco;color:mediumvioletred'>&lt;algorithm&gt;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#A020F0'>#include </span><span
+lang=EN-US style='font-family:Monaco;color:mediumvioletred'>&lt;cstring&gt;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>using
+namespace </span><span lang=EN-US style='font-family:Monaco;color:#371F80'>std</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>const int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>maxn </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>1e5 </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>7</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>const int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>inf </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>0x3f3f3f3f</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>struct </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>node</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>{<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>to</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>next</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>w</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:orange'>}</span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>e</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>maxn</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>head</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>maxn</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>ecnt</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>n</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>,</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>k</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>void </span><span
+lang=EN-US style='font-family:Monaco;color:lightseagreen'>addedge</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>v</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>w</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>e</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>ecnt</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>node</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>{</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>v</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>head</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>w</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>}</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>head</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>ecnt</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>++;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>vis</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>maxn</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>struct </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>Q_Q </span><span lang=EN-US
+style='font-family:Monaco;color:orange'>{<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>N</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>subTMaxSize</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>CenterIdx</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>sz</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>maxn</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>void </span><span
+lang=EN-US style='font-family:Monaco;color:lightseagreen'>dfs</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>fa</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>sz</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>1</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>balance </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>0</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>for
+</span><span lang=EN-US style='font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>i </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>head</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>; ~</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>e</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>next</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>v </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>e</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>to</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>if
+</span><span lang=EN-US style='font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>v </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>== </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>fa </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>|| </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>vis</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]) </span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>continue</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:indianred'>dfs</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>sz</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>+= </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>sz</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>balance
+</span><span lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:indianred'>max</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>balance</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>sz</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>- </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>1</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>balance
+</span><span lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:indianred'>max</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>balance</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>N </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>- </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>sz</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>])</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>if </span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>balance </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>subTMaxSize</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>subTMaxSize
+</span><span lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>balance</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-family:Monaco;color:#660E7A'>CenterIdx </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:cornflowerblue'>u</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:lightseagreen'>retCenter</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>st</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>subTMaxSize
+</span><span lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>inf</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>CenterIdx </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>0</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:indianred'>dfs</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>st</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, -</span><span lang=EN-US
+style='font-family:Monaco;color:teal'>1</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>return
+</span><span lang=EN-US style='font-family:Monaco;color:#660E7A'>CenterIdx</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+}</span><span lang=EN-US style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:teal'>Q_Q </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>X_X</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>data</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>maxn</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>Len</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>dis</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>maxn</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>ANS</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>void </span><span
+lang=EN-US style='font-family:Monaco;color:lightseagreen'>dfs</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>fa</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>data</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>++</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>Len</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>dis</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>for </span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>head</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>; ~</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>e</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>next</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>v </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>e</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>to</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>w </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>e</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>w</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>if </span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>== </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>fa </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>|| </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>vis</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]) </span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>continue</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>dis</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>dis</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>w</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:indianred'>dfs</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+}<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:lightseagreen'>cal</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>now</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>dis</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>now</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>Len </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>0</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:indianred'>dfs</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>0</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:indianred'>sort</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>data </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>1</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>data </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>Len </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>1</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>res </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>0</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>l </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>1</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>r </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>Len</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>while </span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>l </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>r</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>if </span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>data</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>r</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>data</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>l</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>&lt;= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>k</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>res
+</span><span lang=EN-US style='font-family:Monaco;color:slategray'>+= </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>r </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>- </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>l</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>++;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>else
+</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>r</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>--;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>return </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>res</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>void </span><span
+lang=EN-US style='font-family:Monaco;color:lightseagreen'>solve</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>ANS </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>+= </span><span
+lang=EN-US style='font-family:Monaco;color:indianred'>cal</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>0</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>vis</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>] </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>1</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>for </span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>int </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>head</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:cornflowerblue'>u</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>; ~</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>e</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>next</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>v </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>e</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>to</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>w </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>e</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>w</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>if </span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>vis</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]) </span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>continue</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>ANS </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>-= </span><span
+lang=EN-US style='font-family:Monaco;color:indianred'>cal</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>w</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>X_X</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>N </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>X_X</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>sz</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>[</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>]</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dimgray'>//
+printf(&quot;Center root : %d\n&quot;,X_X.retCenter(v));<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:indianred'>solve</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>X_X</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:indianred'>retCenter</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>))</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+}<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>void </span><span
+lang=EN-US style='font-family:Monaco;color:lightseagreen'>init</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(){<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>ANS </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>0</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>ecnt </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>0</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:indianred'>memset</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>head</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, -</span><span lang=EN-US
+style='font-family:Monaco;color:teal'>1</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>sizeof</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>head</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>))</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:indianred'>memset</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>vis</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>0</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:dodgerblue'>sizeof</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>vis</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>))</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+</span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:lightseagreen'>main</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>() {<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>while </span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:indianred'>scanf</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-US
+style='font-family:Monaco;color:teal'>%d%d</span><span lang=EN-US
+style='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, &amp;</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>n</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, &amp;</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>k</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>!= </span><span lang=EN-US
+style='font-family:Monaco;color:#1F542E'>EOF</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>n </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>+ </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>k</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:indianred'>init</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>()</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>for
+</span><span lang=EN-US style='font-family:Monaco;color:orange'>(</span><span
+lang=EN-US style='font-family:Monaco;color:dodgerblue'>int </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>i </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:teal'>1</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>&lt; </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>n</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>; </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>i</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>++</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>) {<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>u</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>, </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>w</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:indianred'>scanf</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-US
+style='font-family:Monaco;color:teal'>%d%d%d</span><span lang=EN-US
+style='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, &amp;</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>u</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, &amp;</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, &amp;</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>w</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:indianred'>addedge</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>u</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>w</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+            </span><span lang=EN-US style='font-family:Monaco;color:indianred'>addedge</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>v</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>u</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>w</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:#D87093'>X_X</span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:#660E7A'>N </span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>= </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>n</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>st </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>1</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>int
+</span><span lang=EN-US style='font-family:Monaco;color:#D87093'>root </span><span
+lang=EN-US style='font-family:Monaco;color:slategray'>= </span><span
+lang=EN-US style='font-family:Monaco;color:#D87093'>X_X</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>.</span><span lang=EN-US
+style='font-family:Monaco;color:indianred'>retCenter</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>st</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#A020F0'>#ifndef </span><span
+lang=EN-US style='font-family:Monaco;color:black'>ONLINE_JUDGE<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:indianred'>printf</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:mediumvioletred'>&quot;Root = </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>%d\n</span><span lang=EN-US
+style='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>root</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:#A020F0'>#endif<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:indianred'>solve</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>root</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+        </span><span lang=EN-US style='font-family:Monaco;color:indianred'>printf</span><span
+lang=EN-US style='font-family:Monaco;color:orange'>(</span><span lang=EN-US
+style='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-US
+style='font-family:Monaco;color:teal'>%d\n</span><span lang=EN-US
+style='font-family:Monaco;color:mediumvioletred'>&quot;</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>, </span><span lang=EN-US
+style='font-family:Monaco;color:#D87093'>ANS</span><span lang=EN-US
+style='font-family:Monaco;color:orange'>)</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:orange'>}<br>
+    </span><span lang=EN-US style='font-family:Monaco;color:dodgerblue'>return </span><span
+lang=EN-US style='font-family:Monaco;color:teal'>0</span><span lang=EN-US
+style='font-family:Monaco;color:slategray'>;<br>
+</span><span lang=EN-US style='font-family:Monaco;color:orange'>}</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
