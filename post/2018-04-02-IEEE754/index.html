@@ -2,7 +2,6 @@
 <html lang="zh-Hans">
 <head>
 <meta charset="utf-8">
-<meta name="baidu-site-verification" content="UFHIwZQP6X" />
 <title>IEE754 - ACM</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
@@ -27,6 +26,8 @@
 <meta name="twitter:description" content="本文讨论三个问题 计算机如何表示浮点数，不同平台，处理器，是否一致 32位精度浮点数float与64位精度浮点数double能表示的范围 浮点数是如何存储的最后检验 printf(“%d”, 2.5)  IEEE754标准4种浮点数值的表示  单精度 双精度 延伸单精确度(43位元以上) 延伸双精确度(79位元以上)  浮点数表示$\displaystyle Value=sign\times ex">
 <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/General_floating_point_frac.svg/640px-General_floating_point_frac.svg.png?1522586541085">
 
+<script>var onError = function (e) { document.querySelector("#enc_error").innerHTML = "密码错误！" }; function decrypt() { var e = document.querySelector("#enc_passwd input").value; console.log(e), doDecrypt(e, onError) } function EnterPress(e) { 13 == (e = window.event || e).keyCode && decrypt() } function doDecrypt(e, n) { console.log("in doDecrypt"); var t = document.getElementById("enc_content").innerHTML; try { var o = CryptoJS.AES.decrypt(t, e); plaintext = o.toString(CryptoJS.enc.Utf8) } catch (e) { return void (n && n(e)) } document.getElementById("enc_content").innerHTML = plaintext, document.getElementById("enc_content").style.display = "block", document.getElementById("enc_passwd").style.display = "none" }</script>
+
 
     <!-- Edit here -->
     <script type="text/x-mathjax-config">
@@ -35,11 +36,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
-
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
 
-<link rel="stylesheet" href="/styles.5597c95e361b601d260c.css">
+<link rel="stylesheet" href="/theme.1fc1f01323f967d09cbe.css">
+<link rel="stylesheet" href="/styles.6ce25626d8e91c2ba39b.css">
+<link rel="stylesheet" href="/styles.89afe31ae4afb635fb0c.css">
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123669885-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -47,12 +50,12 @@
   gtag('js', new Date());
   gtag('config', 'UA-123669885-1');
 </script>
-<script src="/config.01d5ff93aeacbab604c8.js"></script>
+<script src="/config.e79bb98876de224797d9.js"></script>
 </head>
 <body>
 <is-root></is-root>
 <script src="/runtime.a66f828dca56eeb90e02.js"></script>
-<script src="/polyfills.8f67e44aa389442fc98e.js"></script>
-<script src="/main.b51dbf855b48db0f2d0c.zh-Hans.js"></script>
+<script src="/polyfills.30d0d5b9a15077b184d9.js"></script>
+<script src="/main.93fbecc717222d0db653.zh-Hans.js"></script>
 </body>
 </html>

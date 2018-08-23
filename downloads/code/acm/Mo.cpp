@@ -56,4 +56,5 @@ int main() {
 	}
 	sort(q+1, q+m+1, CMP);
 	for(int i=1;i<=m;i++) cout << q[i].A << "/" << q[i].B << endl;
+	
 }
