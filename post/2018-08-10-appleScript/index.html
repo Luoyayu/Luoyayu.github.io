@@ -26,17 +26,17 @@
 <meta name="twitter:description" content="刚入手macOS时捣鼓的几个小脚本。直到今天发现Hexo的高亮如此辣眼睛，遂想到了Word可以导出html, 再结合Clion的富文本于是做出了html嵌入呈现代码的设计，写了个自动化脚本，自动把第一行注释内容作为文件名，通过clion导出html, 复制到博客路径下。调用方法:&amp;lt;iframe id=&amp;quot;iFrame0&amp;quot; name=&amp;quot;iFrame0&amp;quot; w">
 <meta name="twitter:image" content="https://i.loli.net/2018/08/10/5b6d1c90cfc8a.gif">
 
-<script>var onError = function (e) { document.querySelector("#enc_error").innerHTML = "密码错误！" }; function decrypt() { var e = document.querySelector("#enc_passwd input").value; console.log(e), doDecrypt(e, onError) } function EnterPress(e) { 13 == (e = window.event || e).keyCode && decrypt() } function doDecrypt(e, n) { console.log("in doDecrypt"); var t = document.getElementById("enc_content").innerHTML; try { var o = CryptoJS.AES.decrypt(t, e); plaintext = o.toString(CryptoJS.enc.Utf8) } catch (e) { return void (n && n(e)) } document.getElementById("enc_content").innerHTML = plaintext, document.getElementById("enc_content").style.display = "block", document.getElementById("enc_passwd").style.display = "none" }</script>
+<script src="/js/crypto-js.js" async="async"></script>
+<script>var onError=function(e){document.querySelector("#enc_error").innerHTML="密码错误！"};function decrypt(){var e=document.querySelector("#enc_passwd input").value;console.log(e),doDecrypt(e,onError)}function EnterPress(e){13==(e=window.event||e).keyCode&&decrypt()}function doDecrypt(e,n){console.log("in doDecrypt");var t=document.getElementById("enc_content").innerHTML;try{var o=CryptoJS.AES.decrypt(t,e);plaintext=o.toString(CryptoJS.enc.Utf8)}catch(e){return void(n&&n(e))}document.getElementById("enc_content").innerHTML=plaintext,document.getElementById("enc_content").style.display="block",document.getElementById("enc_passwd").style.display="none"}</script>
 
 
     <!-- Edit here -->
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$'],['\\(','\\)']] } });
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$ '],['\\(','\\)']] } });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
 
@@ -50,7 +50,7 @@
   gtag('js', new Date());
   gtag('config', 'UA-123669885-1');
 </script>
-<script src="/config.e938e09636e8fdc9945d.js"></script>
+<script src="/config.52d7e28c7d9e24c06c76.js"></script>
 </head>
 <body>
 <is-root></is-root>

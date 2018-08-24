@@ -23,17 +23,17 @@
 <meta name="twitter:title" content="LCA总结">
 <meta name="twitter:description" content="最近学了LCA的相关问题在此总结下 在有根树中，两个节点u和v的公共祖先中距离最近的那个成为其最近公共祖先，在树上两点因为存在唯一的最短路，故其LCA为最短路上深度最小的点。通过求解LCA我们可以处理如求解树或DAG上任意两点的最短距离，将RMQ转化为LCA，结合树链剖分操作等。求解$LCA$的各种方法全部以HDU 2586为例（自娱自乐）">
 
-<script>var onError = function (e) { document.querySelector("#enc_error").innerHTML = "密码错误！" }; function decrypt() { var e = document.querySelector("#enc_passwd input").value; console.log(e), doDecrypt(e, onError) } function EnterPress(e) { 13 == (e = window.event || e).keyCode && decrypt() } function doDecrypt(e, n) { console.log("in doDecrypt"); var t = document.getElementById("enc_content").innerHTML; try { var o = CryptoJS.AES.decrypt(t, e); plaintext = o.toString(CryptoJS.enc.Utf8) } catch (e) { return void (n && n(e)) } document.getElementById("enc_content").innerHTML = plaintext, document.getElementById("enc_content").style.display = "block", document.getElementById("enc_passwd").style.display = "none" }</script>
+<script src="/js/crypto-js.js" async="async"></script>
+<script>var onError=function(e){document.querySelector("#enc_error").innerHTML="密码错误！"};function decrypt(){var e=document.querySelector("#enc_passwd input").value;console.log(e),doDecrypt(e,onError)}function EnterPress(e){13==(e=window.event||e).keyCode&&decrypt()}function doDecrypt(e,n){console.log("in doDecrypt");var t=document.getElementById("enc_content").innerHTML;try{var o=CryptoJS.AES.decrypt(t,e);plaintext=o.toString(CryptoJS.enc.Utf8)}catch(e){return void(n&&n(e))}document.getElementById("enc_content").innerHTML=plaintext,document.getElementById("enc_content").style.display="block",document.getElementById("enc_passwd").style.display="none"}</script>
 
 
     <!-- Edit here -->
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$'],['\\(','\\)']] } });
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$ '],['\\(','\\)']] } });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
 
@@ -47,7 +47,7 @@
   gtag('js', new Date());
   gtag('config', 'UA-123669885-1');
 </script>
-<script src="/config.e938e09636e8fdc9945d.js"></script>
+<script src="/config.52d7e28c7d9e24c06c76.js"></script>
 </head>
 <body>
 <is-root></is-root>

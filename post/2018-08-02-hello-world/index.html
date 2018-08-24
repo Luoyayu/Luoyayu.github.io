@@ -25,17 +25,17 @@
 <meta name="twitter:description" content="测试 行内LaTeX 测试主题使用Angular搭建目前没有服务动态加载Mathjax解析脚本, 多校结束准备研究下前端基本框架  $x_i*y_j^2$ $y_{k}^{[0]}=A^{[0]}(\omega_{\frac{n}{2}}^k)$ $\displaystyle sum = \sum_{i=1}^na_i$ $\mathbf{X}=\begin{pmatrix}(\mathbf{x}">
 <meta name="twitter:image" content="https://i.loli.net/2018/08/10/5b6d577316807.png">
 
-<script>var onError = function (e) { document.querySelector("#enc_error").innerHTML = "密码错误！" }; function decrypt() { var e = document.querySelector("#enc_passwd input").value; console.log(e), doDecrypt(e, onError) } function EnterPress(e) { 13 == (e = window.event || e).keyCode && decrypt() } function doDecrypt(e, n) { console.log("in doDecrypt"); var t = document.getElementById("enc_content").innerHTML; try { var o = CryptoJS.AES.decrypt(t, e); plaintext = o.toString(CryptoJS.enc.Utf8) } catch (e) { return void (n && n(e)) } document.getElementById("enc_content").innerHTML = plaintext, document.getElementById("enc_content").style.display = "block", document.getElementById("enc_passwd").style.display = "none" }</script>
+<script src="/js/crypto-js.js" async="async"></script>
+<script>var onError=function(e){document.querySelector("#enc_error").innerHTML="密码错误！"};function decrypt(){var e=document.querySelector("#enc_passwd input").value;console.log(e),doDecrypt(e,onError)}function EnterPress(e){13==(e=window.event||e).keyCode&&decrypt()}function doDecrypt(e,n){console.log("in doDecrypt");var t=document.getElementById("enc_content").innerHTML;try{var o=CryptoJS.AES.decrypt(t,e);plaintext=o.toString(CryptoJS.enc.Utf8)}catch(e){return void(n&&n(e))}document.getElementById("enc_content").innerHTML=plaintext,document.getElementById("enc_content").style.display="block",document.getElementById("enc_passwd").style.display="none"}</script>
 
 
     <!-- Edit here -->
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$'],['\\(','\\)']] } });
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$ '],['\\(','\\)']] } });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
 
@@ -49,7 +49,7 @@
   gtag('js', new Date());
   gtag('config', 'UA-123669885-1');
 </script>
-<script src="/config.e938e09636e8fdc9945d.js"></script>
+<script src="/config.52d7e28c7d9e24c06c76.js"></script>
 </head>
 <body>
 <is-root></is-root>

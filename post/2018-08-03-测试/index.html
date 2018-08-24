@@ -10,30 +10,30 @@
 <meta name="theme-color" content="#2a2b33">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
-<meta name="description" content="Welcome to my blog, enter password to read.">
+<meta name="description" content="function doDecrypt (pwd, onError) { 	console.log(&apos;in doDecrypt&apos;); 	const txt = document.getElementById(&apos;enc_content&apos;).innerHTML; 	let plantext; 	try { 		const bytes = CryptoJS.AES.decrypt(txt, pwd);">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="website">
 <meta property="og:title" content="测试">
 <meta property="og:url" content="https://blog.luoyayu.cn/post/2018-08-03-测试/index.html">
 <meta property="og:site_name" content="ACM">
-<meta property="og:description" content="Welcome to my blog, enter password to read.">
+<meta property="og:description" content="function doDecrypt (pwd, onError) { 	console.log(&apos;in doDecrypt&apos;); 	const txt = document.getElementById(&apos;enc_content&apos;).innerHTML; 	let plantext; 	try { 		const bytes = CryptoJS.AES.decrypt(txt, pwd);">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-23T02:43:09.000Z">
+<meta property="og:updated_time" content="2018-08-24T07:23:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="测试">
-<meta name="twitter:description" content="Welcome to my blog, enter password to read.">
+<meta name="twitter:description" content="function doDecrypt (pwd, onError) { 	console.log(&apos;in doDecrypt&apos;); 	const txt = document.getElementById(&apos;enc_content&apos;).innerHTML; 	let plantext; 	try { 		const bytes = CryptoJS.AES.decrypt(txt, pwd);">
 
-<script>var onError = function (e) { document.querySelector("#enc_error").innerHTML = "密码错误！" }; function decrypt() { var e = document.querySelector("#enc_passwd input").value; console.log(e), doDecrypt(e, onError) } function EnterPress(e) { 13 == (e = window.event || e).keyCode && decrypt() } function doDecrypt(e, n) { console.log("in doDecrypt"); var t = document.getElementById("enc_content").innerHTML; try { var o = CryptoJS.AES.decrypt(t, e); plaintext = o.toString(CryptoJS.enc.Utf8) } catch (e) { return void (n && n(e)) } document.getElementById("enc_content").innerHTML = plaintext, document.getElementById("enc_content").style.display = "block", document.getElementById("enc_passwd").style.display = "none" }</script>
+<script src="/js/crypto-js.js" async="async"></script>
+<script>var onError=function(e){document.querySelector("#enc_error").innerHTML="密码错误！"};function decrypt(){var e=document.querySelector("#enc_passwd input").value;console.log(e),doDecrypt(e,onError)}function EnterPress(e){13==(e=window.event||e).keyCode&&decrypt()}function doDecrypt(e,n){console.log("in doDecrypt");var t=document.getElementById("enc_content").innerHTML;try{var o=CryptoJS.AES.decrypt(t,e);plaintext=o.toString(CryptoJS.enc.Utf8)}catch(e){return void(n&&n(e))}document.getElementById("enc_content").innerHTML=plaintext,document.getElementById("enc_content").style.display="block",document.getElementById("enc_passwd").style.display="none"}</script>
 
 
     <!-- Edit here -->
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$'],['\\(','\\)']] } });
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$ '],['\\(','\\)']] } });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
 
@@ -47,7 +47,7 @@
   gtag('js', new Date());
   gtag('config', 'UA-123669885-1');
 </script>
-<script src="/config.e938e09636e8fdc9945d.js"></script>
+<script src="/config.52d7e28c7d9e24c06c76.js"></script>
 </head>
 <body>
 <is-root></is-root>

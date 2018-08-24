@@ -23,17 +23,17 @@
 <meta name="twitter:title" content="2017 ICPC Xian Xor树上异或">
 <meta name="twitter:description" content="题意给出一棵树，$n≤5e4 $, $  \left(q≤5e4 \right)$次询问,每次询问三元组$  \left(u,v,k \right) $，返回从$  u $，到$v$ 上序号$  \left(from \ 0 \right)$为$  k$的倍数的点权连续异或。 思路见代码 代码12345678910111213141516171819202122232425262728293031">
 
-<script>var onError = function (e) { document.querySelector("#enc_error").innerHTML = "密码错误！" }; function decrypt() { var e = document.querySelector("#enc_passwd input").value; console.log(e), doDecrypt(e, onError) } function EnterPress(e) { 13 == (e = window.event || e).keyCode && decrypt() } function doDecrypt(e, n) { console.log("in doDecrypt"); var t = document.getElementById("enc_content").innerHTML; try { var o = CryptoJS.AES.decrypt(t, e); plaintext = o.toString(CryptoJS.enc.Utf8) } catch (e) { return void (n && n(e)) } document.getElementById("enc_content").innerHTML = plaintext, document.getElementById("enc_content").style.display = "block", document.getElementById("enc_passwd").style.display = "none" }</script>
+<script src="/js/crypto-js.js" async="async"></script>
+<script>var onError=function(e){document.querySelector("#enc_error").innerHTML="密码错误！"};function decrypt(){var e=document.querySelector("#enc_passwd input").value;console.log(e),doDecrypt(e,onError)}function EnterPress(e){13==(e=window.event||e).keyCode&&decrypt()}function doDecrypt(e,n){console.log("in doDecrypt");var t=document.getElementById("enc_content").innerHTML;try{var o=CryptoJS.AES.decrypt(t,e);plaintext=o.toString(CryptoJS.enc.Utf8)}catch(e){return void(n&&n(e))}document.getElementById("enc_content").innerHTML=plaintext,document.getElementById("enc_content").style.display="block",document.getElementById("enc_passwd").style.display="none"}</script>
 
 
     <!-- Edit here -->
     <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$'],['\\(','\\)']] } });
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$ '],['\\(','\\)']] } });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 
-<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
 <link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
 
@@ -47,7 +47,7 @@
   gtag('js', new Date());
   gtag('config', 'UA-123669885-1');
 </script>
-<script src="/config.e938e09636e8fdc9945d.js"></script>
+<script src="/config.52d7e28c7d9e24c06c76.js"></script>
 </head>
 <body>
 <is-root></is-root>
