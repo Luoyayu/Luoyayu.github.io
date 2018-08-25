@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.luoyayu.cn/about/index.html</loc>
+    
+    <lastmod>2018-08-25T03:17:59.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.luoyayu.cn/misc/index.html</loc>
     
     <lastmod>2018-08-25T03:11:43.000Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://blog.luoyayu.cn/projects/bilibili-go.html</loc>
     
     <lastmod>2018-08-25T03:10:04.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.luoyayu.cn/about/index.html</loc>
-    
-    <lastmod>2018-08-25T03:08:59.000Z</lastmod>
     
   </url>
   
