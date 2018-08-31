@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.luoyayu.cn/post/2018-08-03-learning%20Go/index.html</loc>
+    
+    <lastmod>2018-08-31T12:51:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://blog.luoyayu.cn/about/index.html</loc>
     
     <lastmod>2018-08-25T03:17:59.000Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://blog.luoyayu.cn/post/2018-08-04-cf%E6%B5%8B%E8%AF%95/index.html</loc>
     
     <lastmod>2018-08-25T03:06:47.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://blog.luoyayu.cn/post/2018-08-03-learning%20Go/index.html</loc>
-    
-    <lastmod>2018-08-25T03:06:19.000Z</lastmod>
     
   </url>
   
