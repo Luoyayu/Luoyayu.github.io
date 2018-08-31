@@ -6,8 +6,6 @@
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#2a2b33">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
 <meta name="description" content="A 签到题注意字符必须改变，有(ab, xy)肯定是不行的 B 填数+规律题意在$n\times n$的网格中填数，先1~ceil(n*n/2)顺序填(x+y)是偶数的格子，在填(x+y)是奇数的格子例如n=4, n=5的情况 做法一：分类讨论按(x+y)奇偶讨论是否加上右下角的值，再讨论x,y的奇偶 做法二：规律(x+y)是偶数的位置的值全部减去右下角的值会发现其实也是1~ceil(n*n/2)">
@@ -24,37 +22,31 @@
 <meta name="twitter:title" content="cf#E49(1027)">
 <meta name="twitter:description" content="A 签到题注意字符必须改变，有(ab, xy)肯定是不行的 B 填数+规律题意在$n\times n$的网格中填数，先1~ceil(n*n/2)顺序填(x+y)是偶数的格子，在填(x+y)是奇数的格子例如n=4, n=5的情况 做法一：分类讨论按(x+y)奇偶讨论是否加上右下角的值，再讨论x,y的奇偶 做法二：规律(x+y)是偶数的位置的值全部减去右下角的值会发现其实也是1~ceil(n*n/2)">
 <meta name="twitter:image" content="https://codeforces.com/predownloaded/24/b6/24b647c14fca3cb512e5c35d990ae8cc535ec585.png">
-
-<script src="/js/crypto-js.js" async="async"></script>
-<script>var onError=function(e){document.querySelector("#enc_error").innerHTML="密码错误！"};function decrypt(){var e=document.querySelector("#enc_passwd input").value;console.log(e),doDecrypt(e,onError)}function EnterPress(e){13==(e=window.event||e).keyCode&&decrypt()}function doDecrypt(e,n){console.log("in doDecrypt");var t=document.getElementById("enc_content").innerHTML;try{var o=CryptoJS.AES.decrypt(t,e);plaintext=o.toString(CryptoJS.enc.Utf8)}catch(e){return void(n&&n(e))}document.getElementById("enc_content").innerHTML=plaintext,document.getElementById("enc_content").style.display="block",document.getElementById("enc_passwd").style.display="none"}</script>
-
-
-    <!-- Edit here -->
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$ '],['\\(','\\)']] } });
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-<link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
-<link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
-
-<link rel="stylesheet" href="/theme.1fc1f01323f967d09cbe.css">
-<link rel="stylesheet" href="/styles.6ce25626d8e91c2ba39b.css">
-<link rel="stylesheet" href="/styles.89afe31ae4afb635fb0c.css">
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123669885-1"></script>
+<link rel="alternate" type="application/atom+xml" title="ACM" href="/atom.xml">
+<link rel="stylesheet" href="/theme.5e8b4a805f139949b1e1.css"><link rel="stylesheet" href="/styles.5a19558ecd78bf25d5cd.css">
+<script src="/config.b942ceca11e3838d9f20.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"Luoyayu","description":"Stay Hungry. Stay Foolish.","image":"/images/avatar2.jpg"},"url":"https://blog.luoyayu.cn","image":"https://blog.luoyayu.cn/favicon.ico","description":"ACM","author":{"@type":"Person","name":"Luoyayu","description":"Stay Hungry. Stay Foolish.","image":"/images/avatar2.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"ACM","articleBody":"A 签到题注意字符必须改变，有(ab, xy)肯定是不行的\nB 填数+规律题意在$n\\times n$的网格中填数，先1~ceil(n*n/2)顺序填(x+y)是偶数的格子，在填(x+y)是奇数的格子例如n=4, n=5的情况\n做法一：分类讨论按(x+y)奇偶讨论是否加上右下角的值，再讨论x,y的奇偶\n做法二：规律(x+y)是偶数的位置的值全部减去右下角的值会发现其实也是1~ceil(n*n/2)的填数对于这种情况其值为$\\displaystyle n\\frac{x-1}{2}+\\frac{y+1}{2}$\ncode\n\nC 签到题给出序列你需要找到四个数字组成矩形, 并且最小化$\\displaystyle \\frac{P^2}{S}$, 其中P是周长,S是面积$nlog(n)+O(n)$ 排序扫一遍, 最小化$\\displaystyle \\frac{a}{b}+\\frac{b}{a}$即可\ncode\n\nD","url":"https://blog.luoyayu.cn/post/2018-08-19-cf_E49_1027/index.html","headline":"cf#E49(1027)","image":"https://blog.luoyayu.cn/favicon.ico","datePublished":"2018-08-18T16:00:00.000Z","dateModified":"2018-08-25T03:05:03.000Z","keywords":"codeforces","description":"ACM","publisher":{"@type":"Organization","name":"ACM","logo":{"@type":"ImageObject","url":"https://blog.luoyayu.cn/favicon.ico"}},"author":{"@type":"Person","name":"Luoyayu","description":"Stay Hungry. Stay Foolish.","image":"/images/avatar2.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.luoyayu.cn/post/2018-08-19-cf_E49_1027/index.html"}}]</script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-123669885-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments)};
   gtag('js', new Date());
   gtag('config', 'UA-123669885-1');
+</script><script src="/js/crypto-js.js" async="async"></script>
+<script>var onError=function(e){document.querySelector("#enc_error").innerHTML="密码错误！"};function decrypt(){var e=document.querySelector("#enc_passwd input").value;console.log(e),doDecrypt(e,onError)}function EnterPress(e){13==(e=window.event||e).keyCode&&decrypt()}function doDecrypt(e,n){console.log("in doDecrypt");var t=document.getElementById("enc_content").innerHTML;try{var o=CryptoJS.AES.decrypt(t,e);plaintext=o.toString(CryptoJS.enc.Utf8)}catch(e){return void(n&&n(e))}document.getElementById("enc_content").innerHTML=plaintext,document.getElementById("enc_content").style.display="block",document.getElementById("enc_passwd").style.display="none"}</script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['$$$','$$$ '],['\\(','\\)']] } });
 </script>
-<script src="/config.1d771224b902b8717627.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+<link rel="stylesheet" href="ttypography.css" type="text/css" charset="utf-8" />
+<link rel="stylesheet" href="problem-statement.css" type="text/css" charset="utf-8" />
 </head>
 <body>
 <is-root></is-root>
 <script src="/runtime.a66f828dca56eeb90e02.js"></script>
 <script src="/polyfills.30d0d5b9a15077b184d9.js"></script>
-<script src="/main.93fbecc717222d0db653.zh-Hans.js"></script>
-</body>
+<script src="/main.129201907c12e6e3371a.zh-Hans.js"></script></body>
 </html>

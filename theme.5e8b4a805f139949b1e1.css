@@ -1,0 +1,3 @@
+body { background-image: url("/confectionary.png"); }.page{ max-width: 900px !important; }@media (max-width: 975px) {
+    .sidebar { background-image: url(/shattered-island.png) !important; }
+  }
