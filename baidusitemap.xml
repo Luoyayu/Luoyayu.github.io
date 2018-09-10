@@ -4,6 +4,131 @@
 
     
   <url>
+    <loc>https://blog.luoyayu.cn/post/2018-09-10-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E4%B8%80/index.html</loc>
+    <lastmod>2018-09-10T12:44:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>统计学习方法(I)</title>
+        <pubTime>2017-09-09T16:00:00.000Z</pubTime>
+        
+        <tag>统计学习方法</tag>
+         
+         
+           
+             
+              <breadCrumb title="Machine Learning" url="https://blog.luoyayu.cn/categories/Machine-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.luoyayu.cn/post/2018-08-02-hello-world/index.html</loc>
+    <lastmod>2018-09-02T08:24:56.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-07-21T13:10:51.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+        <tag>life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Blog" url="https://blog.luoyayu.cn/categories/Blog/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.luoyayu.cn/post/2018-08-10-appleScript/index.html</loc>
+    <lastmod>2018-09-02T08:13:01.000Z</lastmod>
+    <data>
+        <display>
+        <title>Apple Script</title>
+        <pubTime>2018-08-09T16:00:00.000Z</pubTime>
+        
+        <tag>Scripts</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="https://blog.luoyayu.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+             
+              <breadCrumb title="macOS" url="https://blog.luoyayu.cn/categories/%E5%B7%A5%E5%85%B7/macOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.luoyayu.cn/post/2018-08-04-cf%E6%B5%8B%E8%AF%95/index.html</loc>
+    <lastmod>2018-09-02T08:09:27.000Z</lastmod>
+    <data>
+        <display>
+        <title>codeforce 题目自动下载</title>
+        <pubTime>2018-08-04T15:03:57.000Z</pubTime>
+        
+        <tag>ACM-codeforces</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="https://blog.luoyayu.cn/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.luoyayu.cn/post/2018-08-18-cf_504_1023/index.html</loc>
+    <lastmod>2018-09-02T08:07:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>cf#504(1023)</title>
+        <pubTime>2018-08-17T16:00:00.000Z</pubTime>
+        
+        <tag>codeforces</tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="https://blog.luoyayu.cn/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://blog.luoyayu.cn/post/2018-08-19-cf_E49_1027/index.html</loc>
+    <lastmod>2018-09-02T08:07:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>cf#E49(1027)</title>
+        <pubTime>2018-08-18T16:00:00.000Z</pubTime>
+        
+        <tag>codeforces</tag>
+         
+         
+           
+             
+              <breadCrumb title="ACM" url="https://blog.luoyayu.cn/categories/ACM/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.luoyayu.cn/post/2018-08-03-learning%20Go/index.html</loc>
     <lastmod>2018-08-31T12:51:14.000Z</lastmod>
     <data>
@@ -42,68 +167,6 @@
            
              
               <breadCrumb title="ACM" url="https://blog.luoyayu.cn/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.luoyayu.cn/post/2018-08-04-cf%E6%B5%8B%E8%AF%95/index.html</loc>
-    <lastmod>2018-08-25T03:06:47.000Z</lastmod>
-    <data>
-        <display>
-        <title>codeforce 题目自动下载</title>
-        <pubTime>2018-08-04T15:03:57.000Z</pubTime>
-        
-        <tag>ACM-codeforces</tag>
-         
-         
-           
-             
-              <breadCrumb title="工具" url="https://blog.luoyayu.cn/categories/%E5%B7%A5%E5%85%B7/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.luoyayu.cn/post/2018-08-19-cf_E49_1027/index.html</loc>
-    <lastmod>2018-08-25T03:05:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>cf#E49(1027)</title>
-        <pubTime>2018-08-18T16:00:00.000Z</pubTime>
-        
-        <tag>codeforces</tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="https://blog.luoyayu.cn/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.luoyayu.cn/post/2018-08-02-hello-world/index.html</loc>
-    <lastmod>2018-08-25T03:04:08.000Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2018-07-21T13:10:51.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-        <tag>life</tag>
-         
-         
-           
-             
-              <breadCrumb title="Blog" url="https://blog.luoyayu.cn/categories/Blog/"/>
           
         </display>
     </data>
@@ -346,11 +409,11 @@
         <title>斐波那契数列与异或</title>
         <pubTime>2017-09-13T16:00:00.000Z</pubTime>
         
+        <tag>ACM-异或</tag>
+         
         <tag>ACM-打表</tag>
          
         <tag>ACM-矩阵快速幂</tag>
-         
-        <tag>ACM-异或</tag>
          
          
            
@@ -377,49 +440,6 @@
         <tag>ACM-图论</tag>
          
         <tag>ACM-总结</tag>
-         
-         
-           
-             
-              <breadCrumb title="ACM" url="https://blog.luoyayu.cn/categories/ACM/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.luoyayu.cn/post/2018-08-10-appleScript/index.html</loc>
-    <lastmod>2018-08-25T02:37:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>Apple Script</title>
-        <pubTime>2018-08-09T16:00:00.000Z</pubTime>
-        
-        <tag>Scripts</tag>
-         
-         
-           
-             
-              <breadCrumb title="工具" url="https://blog.luoyayu.cn/categories/%E5%B7%A5%E5%85%B7/"/>
-          
-             
-              <breadCrumb title="macOS" url="https://blog.luoyayu.cn/categories/%E5%B7%A5%E5%85%B7/macOS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://blog.luoyayu.cn/post/2018-08-18-cf_504_1023/index.html</loc>
-    <lastmod>2018-08-25T02:35:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>cf#504(1023)</title>
-        <pubTime>2018-08-17T16:00:00.000Z</pubTime>
-        
-        <tag>codeforces</tag>
          
          
            
