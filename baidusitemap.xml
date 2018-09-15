@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://blog.luoyayu.cn/post/2018-9-15-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E4%BA%8C/index.html</loc>
+    <lastmod>2018-09-15T14:13:18.000Z</lastmod>
+    <data>
+        <display>
+        <title>统计学习方法(II)</title>
+        <pubTime>2018-09-14T16:00:00.000Z</pubTime>
+        
+        <tag>统计学习方法</tag>
+         
+         
+           
+             
+              <breadCrumb title="Machine Learning" url="https://blog.luoyayu.cn/categories/Machine-Learning/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://blog.luoyayu.cn/post/2018-09-10-%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95%E4%B8%80/index.html</loc>
     <lastmod>2018-09-15T08:45:57.000Z</lastmod>
     <data>
@@ -410,11 +430,11 @@
         <title>斐波那契数列与异或</title>
         <pubTime>2017-09-13T16:00:00.000Z</pubTime>
         
-        <tag>ACM-异或</tag>
-         
         <tag>ACM-打表</tag>
          
         <tag>ACM-矩阵快速幂</tag>
+         
+        <tag>ACM-异或</tag>
          
          
            
