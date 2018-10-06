@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>ACM</title>
+  <title>Home</title>
   
-  <subtitle>ACM</subtitle>
+  <subtitle>Blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.luoyayu.cn/"/>
@@ -256,7 +256,7 @@
     <published>2018-08-03T05:16:43.000Z</published>
     <updated>2018-08-24T07:23:27.000Z</updated>
     
-    <content type="html"><![CDATA[<script src="/js/crypto-js.js"></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1+oSeO+QPfr9syp1YJwjMqVMN9Z52oT2heM2/Iuvf7oaJFpqCGzqsjmLvKpruISF6d1cUT8CWghyKp4JGEeVF+ewhJKuGZez3qo4iEhhQAKurXeT+Zc4S6J</div><div id="enc_passwd"><input type="text" onkeydown="EnterPress" onkeypress="EnterPress(event)" style="/* border-radius: 10px; */border-style: groove;/* border: 0px; */border-bottom: 2px solid #0097a7; /* 下划线效果 */border-top:0px;border-left:0px;border-right:0px;height: 30px;width: 61.8%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;background: #61616;padding-left: 5px" placeholder="输入密码后请按回车"></div>]]></content>
+    <content type="html"><![CDATA[<script src="/js/crypto-js.js"></script><script>function doDecrypt (pwd, onError) {console.log('in doDecrypt');const txt = document.getElementById('enc_content').innerHTML;let plantext;try {const bytes = CryptoJS.AES.decrypt(txt, pwd);var plaintext = bytes.toString(CryptoJS.enc.Utf8);} catch(err) {if(onError) {onError(err);}return;}document.getElementById('enc_content').innerHTML = plaintext;document.getElementById('enc_content').style.display = 'block';document.getElementById('enc_passwd').style.display = 'none';if(typeof MathJax !== 'undefined') {MathJax.Hub.Queue(['resetEquationNumbers', MathJax.InputJax.TeX],['PreProcess', MathJax.Hub],['Reprocess', MathJax.Hub]);}}</script><div id="enc_content" style="display:none">U2FsdGVkX1/Ee1KP0yHA6hJ7AknrCa1AUtGUqprtkgZ7AdsrMmkYahBzfYPFEbfmbq1BmRIRx4qVszGx/D07fpAAtYDVwyRj+SW5X8CkAttU1YBHg1f1uTl6lig3tNHP</div><div id="enc_passwd"><input type="text" onkeydown="EnterPress" onkeypress="EnterPress(event)" style="/* border-radius: 10px; */border-style: groove;/* border: 0px; */border-bottom: 2px solid #0097a7; /* 下划线效果 */border-top:0px;border-left:0px;border-right:0px;height: 30px;width: 61.8%;cursor: auto;font-size: 102%;color: currentColor;outline: none;text-overflow: initial;background: #61616;padding-left: 5px" placeholder="输入密码后请按回车"></div>]]></content>
     
     <summary type="html">
     
@@ -464,11 +464,11 @@ function doDecrypt (pwd, onError) {
       <category term="ACM" scheme="https://blog.luoyayu.cn/categories/ACM/"/>
     
     
+      <category term="ACM-总结" scheme="https://blog.luoyayu.cn/tags/ACM-%E6%80%BB%E7%BB%93/"/>
+    
       <category term="ACM-尺取法" scheme="https://blog.luoyayu.cn/tags/ACM-%E5%B0%BA%E5%8F%96%E6%B3%95/"/>
     
       <category term="ACM-技巧" scheme="https://blog.luoyayu.cn/tags/ACM-%E6%8A%80%E5%B7%A7/"/>
-    
-      <category term="ACM-总结" scheme="https://blog.luoyayu.cn/tags/ACM-%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
